@@ -1,0 +1,61 @@
+@import @/styles/helpers
+
+.artist
+    display: flex
+    align-items: center
+    padding: rem(21) rem(80)
+    border-bottom: rem(1) solid $n3
+    +xl
+        padding: rem(21) rem(64)
+    +w
+        padding: rem(40)
+    +t
+        padding: rem(24)
+    &:not(:last-child)
+        margin-bottom: rem(48)
+        +w
+            margin-bottom: 0
+
+.avatar
+    position: relative
+    flex-shrink: 0
+    width: rem(120)
+    height: rem(120)
+    +m
+        width: rem(100)
+        height: rem(100)
+    img
+        border-radius: rem(16)
+
+.details
+    flex-grow: 1
+    padding: 0 rem(32)
+    +d
+        padding-right: 0
+    +m
+        padding-left: rem(20)
+
+.login
+    margin-bottom: rem(4)
+    +body1
+    +m
+        +body2Bold
+
+.price
+    +base
+    color: $n5
+    span
+        color: $n7
+
+.button
+    min-width: rem(128)
+    padding: 0 rem(16)
+    +d
+        display: none
+    span
+        display: none
+    &.active
+        background: $n7
+        color: $n1
+        span
+            display: inline

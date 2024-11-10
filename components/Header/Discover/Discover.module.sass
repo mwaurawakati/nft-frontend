@@ -1,0 +1,84 @@
+@import @/styles/helpers
+
+.discover
+    position: relative
+    +w
+        display: none
+    &.active
+        .head
+            color: $s2
+            svg
+                transform: rotate(180deg)
+                fill: $s2
+        .body
+            transform: translateY(0)
+            visibility: visible
+            opacity: 1
+    &.light
+        .head
+            color: $n3
+            svg
+                fill: $n3
+            &:hover
+                color: $n1
+                svg
+                    fill: $n1
+        &.active
+            .head
+                color: $n1
+                svg
+                    fill: $n1
+
+.head
+    display: flex
+    align-items: center
+    +button
+    color: $n7
+    transition: color .2s
+    svg
+        margin-left: rem(12)
+        fill: $n7
+        transition: all .2s
+    &:hover
+        color: $s2
+        svg
+            fill: $s2
+
+.body
+    position: absolute
+    top: 100%
+    left: rem(-32)
+    width: rem(326)
+    padding-top: rem(16)
+    transform: translateY(rem(16))
+    visibility: hidden
+    opacity: 0
+    transition: all .2s
+    
+.list
+    border: rem(1) solid $n3
+    overflow: hidden
+    border-radius: rem(20)
+    background: $n1
+    +shadow1
+
+.item
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: rem(24) rem(32)
+    +body2Bold
+    color: $n7
+    transition: color .2s
+    svg
+        margin-left: rem(24)
+        fill: $n5
+        transition: fill .2s
+    &:hover
+        color: $s2
+        svg
+            fill: $s2
+    &:not(:last-child)
+        border-bottom: rem(1) solid $n3
+
+    

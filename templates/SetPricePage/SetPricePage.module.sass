@@ -1,0 +1,32 @@
+@import @/styles/helpers
+
+.row
+    display: flex
+    border-radius: rem(24)
+    background: $n1
+    box-shadow: 0 rem(40) rem(48) rem(-24) rgba(0, 0, 0, 0.1)
+    +d
+        display: block
+
+.col
+    flex: 0 0 50%
+    padding: rem(32)
+    +d
+        width: 100%
+        padding: rem(24)
+    +m
+        padding: rem(16)
+    &:nth-child(1)
+        border-width: 0 rem(1) 0 0
+        border-style: solid
+        border-color: $n3
+        +d
+            border-width: 0 0 rem(1)
+
+.label
+    +title
+    color: $n5
+
+.button
+    margin-top: rem(20)
+    padding: 0 rem(16)

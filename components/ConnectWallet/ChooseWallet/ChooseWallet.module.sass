@@ -1,0 +1,163 @@
+@import @/styles/helpers
+
+.choose
+    margin: auto 0
+
+.title
+    margin-bottom: rem(48)
+    color: $n1
+
+.head
+    position: relative
+    margin-bottom: rem(48)
+    +d
+         margin: 0 rem(-40) rem(48)
+    +m
+        margin-bottom: rem(32)
+    &:before
+        content: ""
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        height: rem(1)
+        background: $n7
+
+.tabs
+    display: flex
+    +d
+        -webkit-overflow-scrolling: touch
+        overflow: auto
+        scrollbar-width: none
+        -ms-overflow-style: none
+        &::-webkit-scrollbar
+            display: none
+            width: 0
+            height: 0
+        &:before,
+        &:after
+            content: ""
+            flex-shrink: 0
+            display: block
+            width: rem(40)
+
+.tab
+    position: relative
+    display: flex
+    align-items: center
+    flex-shrink: 0
+    height: rem(56)
+    padding: 0 rem(32)
+    border-bottom: rem(1) solid transparent
+    +base
+    color: $n5
+    transition: all .2s
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    +d
+        margin-bottom: rem(0)
+    &:hover,
+    &.active
+        color: $n1
+    &.active
+        border-color: $n1
+
+.wallet
+    position: relative
+    width: 100%
+    svg
+        position: absolute
+        top: 50%
+        right: rem(32)
+        transform: translateY(-50%)
+        fill: $n1
+        opacity: 0
+        transition: opacity .2s
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+    &:before
+        top: rem(-6)
+        left: rem(-6)
+        right: rem(-6)
+        bottom: rem(-6)
+        border-radius: rem(16)
+        background: $grd
+        opacity: 0
+        transition: opacity .2s
+    &:after
+        top: rem(-4)
+        left: rem(-4)
+        right: rem(-4)
+        bottom: rem(-4)
+        z-index: 1
+        border-radius: rem(15)
+        background: $n8
+    &:hover
+        .inner
+            background: $n7
+            color: $n1
+        svg
+            opacity: 1
+        &:before
+            opacity: 1
+    &:not(:last-child)
+        margin-bottom: rem(20)
+
+.inner
+    position: relative
+    z-index: 2
+    display: flex
+    align-items: center
+    height: rem(80)
+    padding: 0 rem(72) 0 rem(32)
+    border-radius: rem(12)
+    border: rem(2) solid $n7
+    +body1
+    color: $n3
+    transition: background .2s, color .2s
+    +m
+        +body1M
+
+.icon
+    flex-shrink: 0
+    width: rem(40)
+    height: rem(40)
+    margin-right: rem(20)
+    border-radius: 50%
+
+.btns
+    margin-top: rem(48)
+    text-align: center
+    +m
+        margin-top: rem(32)
+
+.scan
+    position: relative
+    padding-left: rem(40)
+    +base
+    color: $n1
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+        border-radius: 50%
+    &:before
+        top: 0
+        left: 0
+        width: rem(24)
+        height: rem(24)
+        border: rem(2) solid $n4
+        transition: border-color .2s
+    &:after
+        top: rem(10)
+        left: rem(10)
+        width: rem(4)
+        height: rem(4)
+        background: $n4
+        transition: background .2s
+    &:hover
+        &:before
+            border-color: $n1
+        &::after
+            background: $n1

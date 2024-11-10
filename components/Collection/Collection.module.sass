@@ -1,0 +1,89 @@
+@import @/styles/helpers
+
+.collection
+    display: block
+    color: $n1
+    transition: color .2s
+    &:hover
+        color: $s2
+        .picture
+            transform: scale(1.05)
+    &.dark
+        color: $n7
+        .floor
+            span
+                color: $n7
+        &:hover
+            color: $s2
+
+.preview
+    position: relative
+    height: rem(360)
+    margin-bottom: rem(32)
+    border-radius: rem(20)
+    overflow: hidden
+    +m
+        margin-bottom: rem(16)
+    img
+        border-radius: rem(20)
+
+.picture
+    border-radius: rem(20)
+    transition: transform 1s
+
+.category
+    position: absolute
+    top: rem(8)
+    left: rem(8)
+    display: flex
+    align-items: center
+    padding: rem(8) rem(16) rem(8) rem(8)
+    border-radius: rem(12)
+    background: $o7-75
+    +title
+    color: $n1
+
+.image
+    position: relative
+    flex-shrink: 0
+    width: rem(40)
+    height: rem(40)
+    margin-right: rem(16)
+    img
+        border-radius: rem(8)
+
+.details
+    display: flex
+    align-items: flex-start
+    .balance
+        margin: rem(5) 0 0 auto
+        +d
+            display: none
+        +t
+            display: flex
+        +m
+            display: none
+    .users
+        margin-left: rem(20)
+        +m
+            display: none
+
+.title
+    margin-right: auto
+    padding-right: rem(16)
+    +body1
+    +m
+        padding-right: 0
+
+.floor
+    flex-shrink: 0
+    margin: rem(5) 0 0 rem(20)
+    +captionBold
+    color: $n5
+    span
+        +base
+        color: $n1
+
+
+
+

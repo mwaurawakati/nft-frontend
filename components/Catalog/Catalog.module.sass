@@ -1,0 +1,119 @@
+@import @/styles/helpers
+
+.catalog
+    transition: background .2s
+    &.dark
+        background: $n8
+        .title
+            color: $n1
+        .toggle
+            border-color: $n7
+            background: $n7
+            svg
+                fill: $n1
+            &:hover
+                background: transparent
+            &.active
+                background: $n7
+
+.toggle
+    margin-left: rem(70)
+    flex-shrink: 0
+    width: rem(48)
+    height: rem(48)
+    border: rem(2) solid $n3
+    border-radius: 50%
+    font-size: 0
+    transition: background .2s, border-color .2s
+    +d
+        margin-left: rem(40)
+    +t
+        margin-left: auto
+    svg
+        fill: $n5
+        transition: fill .2s
+    &:hover,
+    &.active
+        border-color: $n7
+    &:hover
+        svg
+            fill: $n7
+    &.active
+        background: $n7
+        border-color: $n7
+        svg
+            fill: $n1
+        .filter
+            display: none
+        .close
+            display: inline-block
+            
+.close
+    display: none
+
+.wrapper
+    padding: rem(128) rem(80)
+    +xl
+        padding: rem(64)
+    +w
+        padding: rem(64) rem(40)
+    +d
+        padding: rem(40)
+    +t
+        padding: rem(40) rem(24)
+
+.top
+    display: flex
+    align-items: center
+    margin-bottom: rem(44)
+    +t
+        margin-bottom: rem(32)
+        flex-wrap: wrap
+    +m
+        align-items: flex-start
+
+.tabs
+    margin-left: auto
+    +t
+        order: 3
+        flex: 0 0 100%
+        margin: rem(24) 0 0
+
+.title
+    margin-right: rem(40)
+    transition: color .2s
+    +t
+        flex: 0 0 calc(100% - rem(48))
+        margin-right: 0
+        padding-right: rem(32)
+    +m
+        +h3M
+
+.list
+    display: flex
+    flex-wrap: wrap
+    margin: rem(-24) rem(-20) 0
+    +d
+        margin: rem(-48) rem(-10) 0
+    +m
+        display: block
+        margin: 0
+
+.card
+    flex: 0 0 25%
+    width: 25%
+    margin-top: rem(24)
+    +d
+        flex: 0 0 calc(33.333% - rem(20))
+        width: calc(33.333% - rem(20))
+        margin: rem(48) rem(10) 0
+    +t
+        flex: 0 0 calc(50% - rem(20))
+        width: calc(50% - rem(20))
+    +m
+        width: 100%
+        margin: rem(40) 0 0
+
+.btns
+    margin-top: rem(40)
+    text-align: center

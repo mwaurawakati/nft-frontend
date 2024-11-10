@@ -1,0 +1,122 @@
+@import @/styles/helpers
+
+.action
+    padding: rem(40)
+    border-radius: rem(16)
+    background: $n2
+    text-align: center
+    +d
+        padding: rem(40) rem(24)
+    .avatar
+        width: rem(64)
+        height: rem(64)
+        margin: 0 auto rem(16)
+    .content,
+    .date
+        margin-bottom: rem(16)
+    .link
+        display: inline-flex
+        align-items: center
+        height: rem(44)
+        padding: 0 rem(24)
+        border-radius: rem(12)
+        box-shadow: 0 rem(16) rem(20) rem(-16) rgba(0, 0, 0, 0.15)
+        background: $n1
+        +captionBold
+        color: $n5
+        span
+            margin-left: rem(5)
+            color: $n7
+        svg
+            width: rem(16)
+            height: rem(16)
+            margin-left: rem(8)
+            fill: $n4
+            transition: fill .2s
+        &:hover
+            svg
+                fill: $n7
+    &:not(:last-child)
+        margin-bottom: rem(48)
+        +m
+            margin-bottom: rem(32)
+
+.item
+    display: flex
+    align-items: center
+    padding: rem(32) 0
+    border-top: rem(1) solid $n3
+    +m
+        padding: rem(24) 0
+    .avatar
+        width: rem(48)
+        height: rem(48)
+        margin-right: rem(20)
+        +m
+            margin-right: rem(12)
+    .link
+        margin-left: rem(12)
+        font-size: 0
+        svg
+            width: rem(20)
+            height: rem(20)
+            fill: $n4
+            transition: fill .2s
+        &:hover
+            svg
+                fill: $n7
+
+.avatar
+    position: relative
+    flex-shrink: 0
+    border: rem(4) solid $n1
+    border-radius: 50%
+    img
+        position: relative
+        z-index: 3
+        border-radius: 50%
+    &:before
+        content: ""
+        position: absolute
+        inset: rem(-4)
+        border: rem(1) solid $n7
+        border-radius: 50%
+    &.history
+        &:before
+            inset: rem(-3)
+            z-index: 1
+            background: $n1
+            border-color: transparent
+        &:after
+            content: ""
+            position: absolute
+            inset: rem(-4)
+            background: $grd
+            border-radius: 50%
+
+.details
+    flex-grow: 1
+
+.content
+    +base
+    span
+        color: $n5
+
+.date
+    +caption
+    color: $n5
+
+.price
+    margin-left: rem(24)
+    white-space: nowrap
+    +body2Bold
+    +m
+        font-size: rem(16)
+
+.title
+    margin-bottom: rem(12)
+    color: $n5
+    +d
+        +h4S
+    span
+        color: $n7

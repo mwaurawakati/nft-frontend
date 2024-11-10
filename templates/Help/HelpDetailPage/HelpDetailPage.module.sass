@@ -1,0 +1,59 @@
+@import @/styles/helpers
+
+.row
+    display: flex
+    min-height: calc(100vh - rem(96))
+
+.col
+    flex: 0 0 50%
+    &:nth-child(1)
+        background: $a2
+    &:nth-child(2)
+        padding: rem(56) rem(80) rem(80)
+
+.wrap
+    position: sticky
+    top: 0
+    display: flex
+    flex-direction: column
+    height: 100%
+    max-height: calc(100vh - rem(96))
+    padding: rem(128) rem(80) rem(80)
+    overflow: hidden
+
+.head
+    display: flex
+    justify-content: space-between
+
+.title
+    margin-right: rem(40)
+
+.back
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: rem(80)
+    height: rem(80)
+    background: $n1
+    border-radius: 50%
+    box-shadow: 0 rem(20) rem(16) rem(-6) rgba(0, 0, 0, 0.15)
+    transition: all .2s
+    svg
+        transition: fill .2s
+    &:hover
+        background: $n7
+        svg
+            fill: $n1
+
+.preview
+    position: relative
+    max-width: rem(500)
+    margin-left: rem(-80)
+    &:before
+        content: ""
+        display: block
+        padding-bottom: 100%
+
+.form
+    margin-bottom: rem(64)

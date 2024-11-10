@@ -1,0 +1,95 @@
+@import @/styles/helpers
+
+.details
+    background: $n1
+    box-shadow: 0 rem(40) rem(48) rem(-24) rgba(0, 0, 0, 0.1)
+    border-radius: rem(24)
+    .timerItem
+        flex-direction: row
+        align-items: flex-end
+    .timerValue
+        min-width: rem(44)
+        font-size: rem(32)
+        line-height: rem(40)
+    .timerText
+        position: relative
+        bottom: rem(-3)
+        margin: 0 0 0 rem(3)
+        color: $n4
+        +d
+            bottom: rem(4)
+            +baseS
+
+.head,
+.foot
+    padding: rem(32)
+    +m
+        padding: rem(24) rem(20)
+
+.flex
+    display: flex
+    justify-content: space-between
+    margin-bottom: rem(20)
+    +xl
+        display: block
+
+.box
+    &:not(:last-child)
+        +xl
+            margin-bottom: rem(16)
+
+.label
+    +title
+    color: $n5
+
+.foot
+    display: flex
+    align-items: center
+    border-top: rem(1) solid $n3
+
+.info
+    margin-right: auto
+    +captionBold
+    color: $n5
+
+.user
+    display: flex
+    align-items: center
+
+.avatar
+    position: relative
+    flex-shrink: 0
+    width: rem(48)
+    height: rem(48)
+    margin-right: rem(14)
+    border: rem(4) solid $n1
+    border-radius: 50%
+    img
+        position: relative
+        z-index: 3
+        border-radius: 50%
+    &:before
+        content: ""
+        position: absolute
+        inset: rem(-4)
+        border: rem(1) solid $n7
+        border-radius: 50%
+    &.history
+        &:before
+            inset: rem(-3)
+            z-index: 1
+            background: $n1
+            border-color: transparent
+        &:after
+            content: ""
+            position: absolute
+            inset: rem(-4)
+            background: $grd
+            border-radius: 50%
+
+.author
+    +base
+
+.code
+    +captionBold
+    color: $n5

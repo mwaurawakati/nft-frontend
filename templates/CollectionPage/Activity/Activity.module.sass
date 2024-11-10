@@ -1,0 +1,96 @@
+@import @/styles/helpers
+
+.row
+    display: flex
+    align-items: center
+    border-bottom: rem(1) solid $n7
+    &:nth-child(1)
+        .col
+            padding-top: rem(22)
+            padding-bottom: rem(22)
+            +captionBold
+            color: $n5
+    &:not(:nth-child(1))
+        .col
+            padding-top: rem(32)
+            padding-bottom: rem(32)
+            +base
+            color: $n1
+            +d
+                +baseS
+            +m
+                padding-top: rem(24)
+                padding-bottom: rem(24)
+
+.col
+    &:nth-child(1)
+        flex-shrink: 0
+        width: rem(64)
+        +d
+            width: rem(48)
+    &:nth-child(2),
+    &:nth-child(3)
+        width: calc((100% - rem(184))/2)
+        padding-left: rem(32)
+        +d
+            width: calc((100% - rem(168))/2)
+            padding-left: rem(24)
+        +t
+            padding-left: rem(40)
+        +m
+            width: calc((100% - rem(138))/2)
+            padding-left: rem(20)
+    &:nth-child(4)
+        flex-shrink: 0
+        width: rem(120)
+        text-align: right
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
+        +m
+            width: rem(90)
+
+.preview
+    position: relative
+    width: rem(64)
+    height: rem(64)
+    +d
+        width: rem(48)
+        height: rem(48)
+    img
+        border-radius: rem(12)
+        +d
+            border-radius: rem(8)
+
+.user
+    display: flex
+    align-items: center
+
+.avatar
+    position: relative
+    width: rem(32)
+    height: rem(32)
+    +d
+        display: none
+    +t
+        display: block
+    +m
+        display: none
+    img
+        border-radius: 50%
+
+.login
+    width: calc(100% - rem(32))
+    padding-left: rem(12)
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    +d
+        width: 100%
+        padding-left: 0
+    +t
+        width: calc(100% - rem(32))
+        padding-left: rem(12)
+    +m
+        width: 100%
+        padding-left: 0

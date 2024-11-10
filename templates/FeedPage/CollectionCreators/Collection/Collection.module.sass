@@ -1,0 +1,95 @@
+@import @/styles/helpers
+
+.collection
+    display: block
+    color: $n7
+    transition: color .2s
+    &:hover
+        color: $s2
+        .picture
+            transform: scale(1.05)
+
+.photo
+    position: relative
+    height: rem(500)
+    margin-bottom: rem(36)
+    overflow: hidden
+    border-radius: rem(32)
+    +d
+        height: rem(320)
+        margin-bottom: rem(12)
+        border-radius: rem(16)
+
+.picture
+    border-radius: rem(32)
+    transition: transform 1s
+    +d
+        border-radius: rem(16)
+
+.line
+    display: flex
+    align-items: flex-start
+    padding: 0 rem(24) 0 rem(40)
+    +xl
+        padding-right: 0
+    +d
+        padding-left: rem(24)
+
+.image
+    position: relative
+    flex-shrink: 0
+    width: rem(144)
+    height: rem(144)
+    margin: rem(-96) rem(40) 0 0
+    border-radius: rem(24)
+    box-shadow: 0 0 0 rem(4) $o1
+    +w
+        margin-right: rem(24)
+    +d
+        width: rem(104)
+        height: rem(104)
+        margin-top: rem(-56)
+        border-radius: rem(12)
+    +m
+        margin-right: rem(12)
+    img
+        border-radius: rem(24)
+        +d
+            border-radius: rem(12)
+
+.title
+    margin-right: rem(32)
+    +d
+        margin-right: rem(16)
+        padding-top: rem(8)
+        +h4S
+    +m
+        display: none
+
+.author
+    display: flex
+    align-items: center
+    margin-left: auto
+    +body1
+    color: $n7
+    +d
+        +body1S
+    +m
+        margin-left: 0
+
+.avatar
+    position: relative
+    flex-shrink: 0
+    width: rem(48)
+    height: rem(48)
+    margin-right: rem(16)
+    +d
+        margin-right: rem(12)
+    img
+        border-radius: 50%
+    &:after
+        content: ""
+        position: absolute
+        inset: 0
+        border: rem(2) solid $o1
+        border-radius: 50%

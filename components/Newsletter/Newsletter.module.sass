@@ -1,0 +1,99 @@
+@import @/styles/helpers
+
+.row
+    display: flex
+    +t
+        display: block
+
+.col
+    display: flex
+    flex-direction: column
+    flex: 0 0 50%
+    width: 50%
+    min-height: rem(800)
+    padding: rem(80)
+    +xl
+        padding: rem(64)
+    +w
+        min-height: rem(768)
+        padding: rem(64) rem(40)
+    +d
+        padding: rem(40)
+    +t
+        width: 100%
+        min-height: rem(400)
+        padding: rem(40) rem(24)
+    +m
+        min-height: rem(508)
+    &:nth-child(1)
+        background: $a4
+    &:nth-child(2)
+        background: $n7
+        .title
+            color: $n1
+
+.title
+    margin-bottom: auto
+    padding-bottom: rem(40)
+
+.content
+    max-width: rem(600)
+    margin-bottom: rem(52)
+    +body2
+    +w
+        +body2M
+    +t
+        margin-bottom: rem(32)
+
+.btns
+    display: flex
+    +d
+        margin: 0 rem(-10)
+    +m
+        display: block
+    .button
+        +d
+            flex: 0 0 calc(50% - rem(20))
+            width: calc(50% - rem(20))
+            margin: 0 rem(10)
+            padding: 0 rem(16)
+        +m
+            width: 100%
+            margin: 0
+        &:not(:last-child)
+            margin-right: rem(20)
+            +d
+                margin-right: rem(10)
+            +m
+                margin: 0 0 rem(20)
+
+.info
+    margin-bottom: rem(12)
+    +body2
+    color: $n4
+    +w
+        +body2M
+
+.fieldset
+    display: flex
+    margin: 0 rem(-10) rem(40)
+    +m
+        display: block
+        margin: 0 0 rem(40)
+
+.field
+    flex: 0 0 calc(50% - rem(20))
+    width: calc(50% - rem(20))
+    margin: 0 rem(10)
+    +m
+        width: 100%
+        margin: 0
+        &:not(:last-child)
+            margin-bottom: rem(32)
+    .input
+        height: rem(56)
+        +base
+
+.button
+    +m
+        width: 100%

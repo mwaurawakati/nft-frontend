@@ -1,0 +1,133 @@
+@import @/styles/helpers
+
+.creativity
+    padding: rem(128) rem(80)
+    +xl
+        padding: rem(96) rem(64)
+    +w
+        padding: rem(80) rem(40)
+    +t
+        padding: rem(48) rem(24)
+
+.head
+    max-width: rem(784)
+    margin: 0 auto rem(80)
+    text-align: center
+    +t
+        margin-bottom: rem(40)
+    +m
+        text-align: left
+
+.title
+    margin-bottom: rem(20)
+
+.info
+    +body1
+    color: $n5
+    +m
+        +body1S
+
+.item
+    display: flex
+    align-items: center
+    +xl
+        margin: 0 rem(-32)
+    +w
+        margin: 0 rem(-24)
+    +t
+        display: block
+        margin: 0
+    &:nth-child(2n)
+        flex-direction: row-reverse
+        .wrap
+            padding: 0 rem(80) 0 0
+            +xl
+                padding-right: 0
+        .content
+            max-width: rem(600)
+    &:not(:last-child)
+        margin-bottom: rem(80)
+        +t
+            margin-bottom: rem(48)
+
+.preview,
+.wrap
+    flex: 0 0 50%
+    width: 50%
+    +xl
+        flex: 0 0 calc(50% - rem(64))
+        width: calc(50% - rem(64))
+        margin: 0 rem(32)
+    +w
+        flex: 0 0 calc(50% - rem(48))
+        width: calc(50% - rem(48))
+        margin: 0 rem(24)
+    +t
+        width: 100%
+        margin: 0
+
+.preview
+    position: relative
+    +t
+        margin-bottom: rem(40)
+    video
+        width: 100%
+        border-radius: rem(32)
+
+.wrap
+    padding-left: rem(80)
+    +xl
+        padding-left: 0
+
+.content
+    margin-bottom: rem(40)
+    +body2
+    +w
+        margin-bottom: rem(32)
+        +body2M
+    h2
+        margin-bottom: rem(40)
+        font-size: rem(64)
+        line-height: 1
+        font-weight: 800
+        letter-spacing: -0.02em
+        +w
+            margin-bottom: rem(32)
+            font-size: rem(48)
+        +d
+            +h3M
+    p
+        color: $n5
+        &:not(:last-child)
+            margin-bottom: rem(20)
+    ul
+        margin-top: rem(40)
+        +w
+            margin-top: rem(32)
+        li
+            position: relative
+            padding-left: rem(36)
+            &:before,
+            &:after
+                content: ""
+                position: absolute
+                border-radius: 50%
+            &:before
+                top: rem(4)
+                left: 0
+                width: rem(24)
+                height: rem(24)
+                border: rem(2) solid $n4
+                +w
+                    top: 0
+            &:after
+                top: rem(14)
+                left: rem(10)
+                width: rem(4)
+                height: rem(4)
+                background: $n4
+                +w
+                    top: rem(10)
+            &:not(:last-child)
+                margin-bottom: rem(24)
+

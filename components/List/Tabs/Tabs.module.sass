@@ -1,0 +1,98 @@
+@import @/styles/helpers
+
+.box
+    position: relative
+    &:before
+        content: ""
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        height: rem(1)
+        background: $n7
+        transition: background .2s
+    &.dark
+        &:before
+            background: $n3
+        .button
+            &:before
+                background: $s2
+            &:after
+                background: $n1
+            &:hover,
+            &.active
+                color: $n7
+
+.tabs
+    position: relative
+    display: flex
+    padding-bottom: rem(1)
+    -webkit-overflow-scrolling: touch
+    overflow: auto
+    scrollbar-width: none
+    -ms-overflow-style: none
+    &::-webkit-scrollbar
+        display: none
+        width: 0
+        height: 0
+
+.button
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    flex: 1 0 auto
+    height: rem(84)
+    padding: 0 rem(24)
+    text-align: center
+    white-space: nowrap
+    +base
+    color: $n5
+    transition: all .2s
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+    &:before
+        bottom: rem(-1)
+        background: $grd
+        opacity: 0
+        transition: opacity .2s
+    &:after
+        bottom: 0
+        background: $n8
+        transition: background .2s
+    &:hover,
+    &.active
+        color: $n1
+    &.active
+        color: $n1
+        &:before
+            opacity: 1
+    &:nth-child(4n+1)
+        .counter
+            background: $a4
+    &:nth-child(4n+2)
+        .counter
+            background: $a2
+    &:nth-child(4n+3)
+        .counter
+            background: $a3
+    &:nth-child(4n+4)
+        .counter
+            background: $a1
+
+.title,
+.counter
+    position: relative
+    z-index: 1
+
+.counter
+    margin-left: rem(8)
+    padding: rem(2) rem(8)
+    border-radius: rem(8)
+    color: $n7

@@ -1,0 +1,65 @@
+@import @/styles/helpers
+
+.articles
+    display: flex
+    padding: rem(128) rem(80)
+    background: $n2
+    +xl
+        padding: rem(128) rem(64)
+    +w
+        padding: rem(80) rem(40)
+    +t
+        display: block
+        padding: rem(64) rem(24)
+
+.title
+    width: 100%
+    max-width: rem(600)
+    margin-right: auto
+    +w
+        max-width: rem(480)
+    +t
+        width: 100%
+        max-width: 100%
+        margin: 0 0 rem(32)
+        br
+            display: none
+
+.links
+    flex-grow: 1
+    padding-left: rem(160)
+    +xl
+        padding-left: rem(64)
+    +w
+        padding-left: rem(48)
+    +t
+        padding-left: 0
+
+.link
+    position: relative
+    display: block
+    padding-left: rem(40)
+    +body2Bold
+    color: $n5
+    transition: color .2s
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+        border-radius: 50%
+    &:before
+        top: rem(4)
+        left: 0
+        width: rem(24)
+        height: rem(24)
+        border: rem(2) solid $s2
+    &:after
+        top: rem(14)
+        left: rem(10)
+        width: rem(4)
+        height: rem(4)
+        background: $s2
+    &:hover
+        color: $n7
+    &:not(:last-child)
+        margin-bottom: rem(24)

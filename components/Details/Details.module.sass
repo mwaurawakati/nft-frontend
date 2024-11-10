@@ -1,0 +1,111 @@
+@import @/styles/helpers
+
+.details
+    margin-bottom: auto
+    padding-bottom: rem(40)
+    +xl
+        margin-top: rem(-24)
+    +d
+        margin-top: 0
+
+.head
+    display: flex
+    justify-content: space-between
+    margin-bottom: rem(24)
+
+.title
+    margin-right: rem(32)
+
+.content
+    margin-bottom: rem(24)
+    +body2
+    color: $n5
+    +d
+        +body2M
+    strong
+        font-weight: 700
+        color: $n7
+
+.bid
+    display: flex
+    justify-content: space-between
+    margin: rem(40) 0 rem(24)
+    padding: rem(32)
+    border-radius: rem(24)
+    background: $n1
+    +shadow1
+    +xl
+        padding: rem(24)
+    +w
+        margin-top: rem(24)
+    +m
+        display: block
+        padding: rem(16)
+
+.box
+    &:nth-child(1)
+        +m
+            margin-bottom: rem(24)
+
+.label
+    margin-bottom: rem(12)
+    +base
+    color: $n5
+
+.price
+    margin-top: rem(8)
+    +title
+    color: $n5
+    +d
+        +base
+
+.crypto
+    +d
+        +h3S
+
+.timer
+    .timerValue
+        +w
+            font-size: rem(40)
+            line-height: rem(48)
+        +d
+            +h3S
+    .timerText
+        color: $n5
+        +m
+            margin-top: 0
+
+.link
+    position: relative
+    display: inline-block
+    align-items: center
+    padding-left: rem(40)
+    +body2Bold
+    color: $n7
+    transition: color .2s
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+        border-radius: 50%
+    &:before
+        top: rem(4)
+        left: 0
+        width: rem(24)
+        height: rem(24)
+        border: rem(2) solid $n7
+        transition: border-color .2s
+    &:after
+        top: rem(14)
+        left: rem(10)
+        width: rem(4)
+        height: rem(4)
+        background: $n7
+        transition: background .2s, transform .2s
+    &:hover
+        color: $s2
+        &:before
+            border-color: $s2
+        &:after
+            background: $s2
+            transform: scale(2)

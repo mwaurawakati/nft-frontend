@@ -1,0 +1,70 @@
+@import @/styles/helpers
+
+.message
+    margin: auto 0
+
+.logo
+    width: rem(80)
+    margin-bottom: rem(64)
+    +t
+        margin-bottom: rem(40)
+
+.title
+    margin-bottom: rem(24)
+    color: $n1
+
+.info
+    max-width: rem(450)
+    margin-bottom: rem(40)
+    +base
+    color: $n5
+    +m
+        +baseS
+
+.btns
+    display: flex
+    margin: 0 rem(-6) rem(40)
+    +m
+        display: block
+        margin: 0 0 rem(40)
+
+.button
+    flex: 0 0 calc(50% - rem(12))
+    width: calc(50% - rem(12))
+    margin: 0 rem(6)
+    +m
+        width: 100%
+        height: rem(60)
+        margin: 0
+        &:not(:last-child)
+            margin-bottom: rem(12)
+
+.links
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.question,
+.learn
+    +base
+    transition: color .2s
+    +m
+        +baseS
+
+.question
+    color: $n5
+    &:hover
+        color: $n1
+
+.learn
+    display: flex
+    align-items: center
+    color: $n1
+    svg
+        margin-left: rem(12)
+        fill: $n1
+        transition: fill .2s
+    &:hover
+        color: $s2
+        svg
+            fill: $s2

@@ -1,0 +1,70 @@
+@import @/styles/helpers
+
+.add
+    width: 100%
+    padding: rem(12)
+    border: rem(1) dashed $n5
+    border-radius: rem(24)
+    +m
+        padding: 0
+        border: none
+        border-radius: 0
+
+.inner
+    position: relative
+    height: rem(812)
+    padding: rem(260) rem(24) rem(32)
+    background: $n7
+    border-radius: rem(20)
+    overflow: hidden
+    text-align: center
+    +xl
+        height: rem(662)
+    +m
+        height: 100vh
+        border-radius: 0
+
+.input
+    position: absolute
+    top: 0
+    left: 0
+    font-size: rem(800)
+    opacity: 0
+
+.details
+    position: absolute
+    top: 50%
+    left: 0
+    right: 0
+    transform: translateY(-50%)
+    padding: 0 rem(24)
+    pointer-events: none
+
+.icon
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    width: rem(102)
+    height: rem(102)
+    margin-bottom: rem(32)
+    background: $n1
+    border-radius: 50%
+    svg
+        fill: $n7
+
+.title
+    margin-bottom: rem(16)
+    color: $n1
+
+.text
+    +baseMedium
+    color: $n4
+
+.button
+    position: absolute
+    z-index: 2
+    left: 50%
+    bottom: rem(32)
+    min-width: rem(262)
+    padding: rem(16)
+    transform: translateX(-50%)

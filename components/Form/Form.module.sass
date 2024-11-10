@@ -1,0 +1,55 @@
+@import @/styles/helpers
+
+.form
+    position: relative
+    flex-shrink: 0
+    width: 100%
+    .input
+        height: rem(88)
+        padding-left: rem(44)
+        +body1
+        +m
+            height: rem(60)
+            +body1M
+    &.dark
+        .input
+            border-color: $n6
+            color: $n1
+            &::placeholder
+                color: $n5
+            &:focus
+                border-color: $n4
+        .button
+            &:hover
+                svg
+                    fill: $n1
+    &.buttonRight
+        .input
+            padding: 0 rem(56) 0 0
+            +m
+                padding: 0 rem(40) 0 0
+        .button
+            left: auto
+            right: 0
+
+.field
+    width: 100%
+
+.button
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    font-size: 0
+    transition: background .2s
+    svg
+        width: rem(32)
+        height: rem(32)
+        fill: $n5
+        transition: fill .2s
+        +m
+            width: rem(24)
+            height: rem(24)
+    &:hover
+        svg
+            fill: $n8

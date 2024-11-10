@@ -1,0 +1,15 @@
+@import @/styles/helpers
+
+.layout
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+    min-height: 100vh
+    overflow: hidden
+    &.noOverflow
+        overflow: visible
+        +t
+            overflow: hidden
+
+.inner
+    flex-grow: 1

@@ -1,0 +1,73 @@
+@import @/styles/helpers
+
+.article
+    padding: rem(80)
+    +w
+        padding: rem(80) rem(40)
+    +t
+        padding: rem(64) rem(24)
+    +m
+        padding: rem(48) rem(24)
+
+.content
+    max-width: rem(960)
+    margin: 0 auto
+
+.content,
+.photo
+    &:not(:last-child)
+        margin-bottom: rem(120)
+        +w
+            margin-bottom: rem(80)
+        +t
+            margin-bottom: rem(64)
+
+.photo
+    border-radius: rem(24)
+    +m
+        margin: 0 rem(-24)
+        border-radius: 0
+    img
+        border-radius: rem(24)
+        +m
+            min-height: rem(300)
+            border-radius: 0
+            object-fit: cover
+
+.share
+    max-width: rem(960)
+    margin: 0 auto
+
+.info
+    margin-bottom: rem(32)
+    +button
+
+.socials
+    display: flex
+    margin: 0 rem(-10)
+
+.social
+    display: flex
+    justify-content: center
+    align-items: center
+    flex: 1 1 auto
+    height: rem(56)
+    margin: 0 rem(10)
+    background: $n2
+    border-radius: rem(4)
+    +caption
+    color: $n5
+    transition: background .2s, color .2s
+    +m
+        font-size: 0
+    svg
+        margin-right: rem(8)
+        fill: $n5
+        transition: fill .2s
+        +m
+            margin: 0
+    &:hover
+        background: $n7
+        color: $n1
+        svg
+            fill: $n1

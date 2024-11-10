@@ -1,0 +1,136 @@
+@import @/styles/helpers
+
+.storie
+    position: relative
+    flex-shrink: 0
+    width: rem(104)
+    height: rem(104)
+    margin: 0 rem(24)
+    border: rem(4) solid $n1
+    +xl
+        margin: 0 rem(20)
+    +w
+        margin: 0 rem(12)
+    img
+        position: relative
+        z-index: 2
+        border-radius: 50%
+        transition: transform .7s
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+        border-radius: 50%
+    &:before
+        inset: rem(-4)
+        background: $grd
+    &:after
+        z-index: 1
+        inset: rem(-2)
+        background: $n1
+    &:hover
+        img
+            transform: scale(1.1)
+
+.image
+    position: relative
+    display: block
+    width: 100%
+    height: 100%
+    border-radius: 50%
+    overflow: hidden
+
+.container
+    padding: rem(20)
+    background: none
+    overflow: hidden
+    +m
+        padding: 0
+
+.modal
+    .close
+        +m
+            top: rem(24)
+            border-color: rgba($n1, .25)
+
+.wrapper
+    width: rem(1360)
+    margin: auto
+    +xl
+        width: rem(1034)
+    +r(1180)
+        width: rem(980)
+    +t
+        width: rem(360)
+    +m
+        width: 100%
+
+.box
+    position: relative
+    height: rem(736)
+    margin: 0 rem(20)
+    border-radius: rem(20)
+    background: $n8
+    overflow: hidden
+    transition: height .2s
+    +xl
+        height: rem(552)
+        margin: 0 rem(16)
+    +m
+        height: 100vh
+        margin: 0
+        border-radius: 0
+    &:after
+        content: ""
+        position: absolute
+        z-index: 2
+        inset: 0
+        background: rgba(#000, .85)
+        pointer-events: none
+        transition: all .2s
+
+.inner
+    margin: 0 rem(-2)
+
+.preview
+    position: relative
+    height: 100%
+    margin: 0 rem(2)
+
+.author
+    position: absolute
+    top: rem(20)
+    left: rem(20)
+    right: rem(20)
+    z-index: 3
+    display: flex
+    color: $n3
+    +m
+        padding-right: rem(64)
+
+.avatar
+    position: relative
+    flex-shrink: 0
+    width: rem(60)
+    height: rem(60)
+    margin-right: rem(18)
+    padding: rem(2)
+    box-sizing: border-box
+    border-radius: 50%
+    img
+        position: relative
+        z-index: 2
+        border-radius: 50%
+    &:before
+        content: ""
+        position: absolute
+        inset: rem(-2)
+        background: $grd
+        border-radius: 50%
+
+.name
+    margin-bottom: rem(-6)
+    +title
+
+.login
+    +captionBold

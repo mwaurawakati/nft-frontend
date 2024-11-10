@@ -1,0 +1,89 @@
+@import @/styles/helpers
+
+.row
+    display: flex
+    flex-grow: 1
+    overflow: hidden
+    +t
+        display: block
+
+.col
+    display: flex
+    flex-direction: column
+    flex: 0 0 50%
+    width: 50%
+    padding: rem(80)
+    +xl
+        padding: rem(64)
+    +w
+        padding: rem(40)
+    +t
+        width: 100%
+        padding: rem(40) rem(24)
+
+.logo
+    margin-bottom: auto
+    +t
+        margin: 0 0 rem(40)
+
+.line
+    display: flex
+    justify-content: space-between
+    margin-bottom: rem(24)
+    +m
+        display: block
+
+.arrow
+    margin: rem(8) 0 0 rem(20)
+    +m
+        margin: rem(24) 0 0
+
+.info
+    max-width: rem(450)
+    +body1
+    +w
+        +body1M
+    +m
+        +body1S
+
+.cookies
+    display: flex
+    justify-content: space-between
+    margin-top: rem(48)
+    padding: rem(16)
+    background: $o7-50
+    border-radius: rem(12)
+    +m
+        margin-top: rem(40)
+    &.hide
+        display: none
+
+.accept
+    +caption
+    color: $n1
+    transition: color .2s
+    &:hover
+        color: $s2
+
+.text
+    +caption
+    color: $n5
+    span
+        color: $n1
+
+.back
+    position: absolute
+    top: rem(32)
+    right: rem(32)
+    z-index: 15
+    border-color: $n7
+    background: $n8
+    +w
+        top: rem(16)
+        right: rem(16)
+        width: rem(48)
+        height: rem(48)
+    svg
+        fill: $n1
+    &:hover
+        background: $n7

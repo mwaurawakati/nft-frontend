@@ -1,0 +1,89 @@
+@import @/styles/helpers
+
+.title
+    margin-bottom: rem(64)
+    color: $n1
+    +xl
+        margin-bottom: rem(48)
+    +t
+        margin-bottom: rem(32)
+
+.box
+    padding: rem(48) rem(40) rem(64)
+    background: $n7
+    border-radius: rem(24)
+    +w
+        padding: rem(40) rem(32)
+    +d
+        padding: rem(32)
+    +m
+        padding: rem(24)
+
+.user
+    display: flex
+    align-items: center
+    margin-bottom: rem(48)
+    +m
+        margin-bottom: rem(24)
+
+.avatar
+    position: relative
+    flex-shrink: 0
+    width: rem(96)
+    height: rem(96)
+    margin-right: rem(32)
+    +m
+        width: rem(80)
+        height: rem(80)
+        margin-right: rem(24)
+    img
+        border-radius: 50%
+
+.details
+    flex-grow: 1
+
+.line
+    display: flex
+    justify-content: space-between
+    margin-bottom: rem(4)
+    +base
+    color: $n5
+
+.code
+    +m
+        display: none
+
+.login
+    +body2Bold
+    color: $n1
+
+.subtitle
+    +title
+    color: $n5
+
+.item
+    display: flex
+    align-items: center
+    padding: rem(24) 0
+    +base
+    &:not(:last-child)
+        border-bottom: rem(1) solid $o6
+
+.price
+    color: $n1
+    &:nth-child(1)
+        margin-right: auto
+
+.label
+    margin-right: auto
+    color: $n5
+
+.value
+    color: $n1
+
+.percent
+    margin-right: rem(16)
+    color: $n4
+
+.button
+    margin-top: rem(40)

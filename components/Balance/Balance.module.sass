@@ -1,0 +1,21 @@
+@import @/styles/helpers
+
+.balance
+    display: flex
+    align-items: center
+    +base
+    color: $a4
+    svg
+        fill: $a4
+    &.dark
+        color: $s2
+        svg
+            fill: $s2
+    &.negative
+        color: #FD5D47
+        svg
+            transform: rotate(180deg)
+            fill: #FD5D47
+
+.value
+    margin-left: rem(4)

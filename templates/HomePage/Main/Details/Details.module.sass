@@ -1,0 +1,67 @@
+@import @/styles/helpers
+
+.details
+    display: flex
+    margin-bottom: auto
+    box-shadow: 0 rem(16) rem(40) rem(-8) rgba(0, 0, 0, 0.12)
+    border-radius: rem(12)
+    background: $n1
+    +t
+        margin-bottom: rem(48)
+
+.item
+    flex: 0 0 calc(33.333%)
+    width: calc(33.333%)
+    padding: rem(16) 0 rem(16) rem(24)
+    +d
+        flex: 0 0 calc(50%)
+        width: calc(50%)
+    +t
+        flex: 0 0 calc(33.333%)
+        width: calc(33.333%)
+    +m
+        flex: 0 0 calc(50%)
+        width: calc(50%)
+    &:nth-child(3)
+        +w
+            display: none
+        +t
+            display: block
+        +m
+            display: none
+
+.category
+    margin-bottom: rem(4)
+    +base
+    color: $n5
+    +m
+        +baseS
+
+.value
+    position: relative
+    padding-left: rem(36)
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    +body1
+    +d
+        +body1M
+    +m
+        +body1S
+    &:before,
+    &:after
+        content: ''
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        border-radius: 50%
+    &:before
+        left: 0
+        width: rem(24)
+        height: rem(24)
+        border: rem(2) solid $n4
+    &:after
+        left: rem(10)
+        width: rem(4)
+        height: rem(4)
+        background: $n4

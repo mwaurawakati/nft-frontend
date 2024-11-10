@@ -1,0 +1,106 @@
+@import @/styles/helpers
+
+.title
+    margin-bottom: rem(40)
+    color: $n1
+
+.box
+    margin-top: rem(40)
+
+.month
+    margin-bottom: rem(24)
+    +body2Bold
+    color: $n5
+    +m
+        +base
+
+.group
+    margin: 0 rem(-80)
+    +xl
+        margin: 0 rem(-64)
+    +w
+        margin: 0 rem(-40)
+    +t
+        margin: 0 rem(-24)
+
+.item
+    position: relative
+    display: flex
+    align-items: center
+    padding: rem(32) rem(80)
+    transition: background .2s
+    +xl
+        padding: rem(32) rem(64)
+    +w
+        padding: rem(32) rem(40)
+    +t
+        padding: rem(32) rem(24)
+    &:after
+        content: ""
+        position: absolute
+        left: rem(80)
+        right: rem(80)
+        bottom: 0
+        height: rem(1)
+        background: $n7
+        +xl
+            left: rem(64)
+            right: rem(64)
+        +w
+            left: rem(40)
+            right: rem(40)
+        +t
+            left: rem(24)
+            right: rem(24)
+    &:hover
+        background: $n7
+    .follow
+        flex-shrink: 0
+        margin-left: rem(24)
+        +d
+            min-width: rem(52)
+            margin-left: rem(40)
+            padding: 0
+            font-size: 0
+            svg
+                margin: 0
+        +t
+            min-width: rem(160)
+            margin-left: rem(24)
+            font-size: rem(12)
+            svg
+                margin-left: rem(8)
+        +m
+            min-width: rem(48)
+            font-size: 0
+            svg
+                margin: 0
+
+.avatar
+    position: relative
+    flex-shrink: 0
+    width: rem(96)
+    height: rem(96)
+    margin-right: rem(32)
+    +m
+        width: rem(64)
+        height: rem(64)
+        margin-right: rem(24)
+    img
+        border-radius: 50%
+
+.details
+    flex-grow: 1
+
+.content
+    margin-bottom: rem(4)
+    +body2Bold
+    color: $n1
+    +m
+        +base
+    span
+        color: $n4
+
+.date
+    +base
+    color: $n5

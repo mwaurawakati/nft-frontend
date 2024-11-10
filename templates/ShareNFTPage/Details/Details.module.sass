@@ -1,0 +1,97 @@
+@import @/styles/helpers
+
+.photo
+    position: relative
+    margin-bottom: rem(48)
+    +w
+        margin-bottom: rem(24)
+    &:before
+        content: ""
+        display: block
+        padding-bottom: 100%
+    img
+        border-radius: rem(20)
+
+.title
+    margin-bottom: rem(20)
+
+.item
+    display: flex
+    align-items: center
+    margin-bottom: rem(100)
+    +xl
+        margin-bottom: rem(52)
+    +w
+        margin-bottom: rem(32)
+
+.preview
+    position: relative
+    flex-shrink: 0
+    width: rem(64)
+    height: rem(64)
+    margin-right: rem(16)
+    img
+        border-radius: rem(12)
+
+.wrap
+    margin-right: rem(16)
+
+.subtitle
+    +base
+
+.price
+    +captionBold
+    color: $n4
+
+.lines
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    margin-left: auto
+    &:before,
+    &:after
+        content: ""
+        display: block
+        height: rem(12)
+        border-radius: rem(4)
+        background: $n3
+    &:before
+        width: rem(88)
+        margin-bottom: rem(12)
+        +m
+            width: rem(60)
+    &:after
+        width: rem(128)
+        +m
+            width: rem(90)
+
+.field
+    position: relative
+
+.input
+    width: 100%
+    height: rem(64)
+    padding: 0 rem(72) 0 rem(32)
+    border-radius: rem(12)
+    background: $o3
+    text-overflow: ellipsis
+    +base
+    color: $n7
+    +w
+        padding: 0 rem(64) 0 rem(20)
+
+.copy
+    position: absolute
+    top: 50%
+    right: rem(32)
+    transform: translateY(-50%)
+    font-size: 0
+    +w
+        right: 0
+        width: rem(64)
+    svg
+        fill: $n5
+        transition: fill .2s
+    &:hover
+        svg
+            fill: $n8

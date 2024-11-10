@@ -1,0 +1,82 @@
+@import @/styles/helpers
+
+.category
+    display: flex
+    padding: rem(80)
+    color: $n7
+    transition: box-shadow .2s, background .2s
+    +xl
+        padding: rem(64)
+    +w
+        padding: rem(40)
+    +t
+        padding: rem(40) rem(24)
+    +m
+        display: block
+    &:hover
+        background: $n1
+        +shadow1
+        .preview
+            background: $n7
+
+.details,
+.preview
+    flex: 0 0 calc(50% - rem(28))
+    width: calc(50% - rem(28))
+    +w
+        flex: 0 0 calc(50% - rem(12))
+        width: calc(50% - rem(12))
+    +m
+        width: 100%
+
+.preview
+    position: relative
+    margin-left: rem(28)
+    background: $n1
+    border-radius: rem(32)
+    transition: background .2s
+    +w
+        margin-left: rem(12)
+    +m
+        margin: 0
+    &:before
+        content: ""
+        display: block
+        padding-bottom: 100%
+        +m
+            padding-bottom: 73.5%
+    img
+        border-radius: rem(32)
+
+.details
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    margin-right: rem(28)
+    +w
+        margin-right: rem(12)
+    +m
+        margin: 0 0 rem(24)
+
+.color
+    width: rem(60)
+    height: rem(16)
+    margin-bottom: rem(24)
+    border-radius: rem(16)
+
+.title
+    margin-bottom: auto
+    +d
+        +h4S
+    +t
+        +h3M
+    +m
+        margin-bottom: rem(16)
+        +h4S
+
+.content
+    margin-top: rem(24)
+    +body2
+    color: $n5
+    +m
+        margin-top: 0

@@ -1,0 +1,97 @@
+@import @/styles/helpers
+
+.preview
+    padding: rem(80)
+    +xl
+        padding: rem(64)
+    +w
+        padding: rem(40)
+    +t
+        padding: rem(40) rem(24)
+    +m
+        padding: rem(24)
+
+.image
+    margin-bottom: rem(40)
+    +m
+        margin-bottom: rem(32)
+    img
+        border-radius: rem(20)
+
+.head
+    display: flex
+    justify-content: space-between
+    margin-bottom: rem(20)
+    +m
+        display: block
+
+.title
+    margin-right: rem(32)
+    +m
+        margin: 0 0 rem(8)
+        font-size: rem(40)
+        line-height: rem(48)
+
+.timer
+    margin-right: rem(-16)
+    .timerItem
+        display: flex
+        flex-direction: row
+        &:nth-child(3)
+            display: none
+        &:not(:last-child)
+            margin-right: rem(16)
+    .timerValue
+        min-width: rem(66)
+        +w
+            font-size: rem(40)
+            line-height: rem(48)
+    .timerText
+        margin-top: 0
+        +body2Bold
+        color: $n5
+
+.foot
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.item
+    display: flex
+    align-items: center
+
+.photo
+    position: relative
+    flex-shrink: 0
+    width: rem(64)
+    height: rem(64)
+    margin-right: rem(16)
+    img
+        border-radius: rem(12)
+
+.subtitle
+    +base
+
+.crypto
+    +captionBold
+    color: $n4
+
+.lines
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    flex-shrink: 0
+    margin-left: rem(24)
+    span
+        height: rem(12)
+        background: $n3
+        border-radius: rem(4)
+        &:nth-child(1)
+            width: rem(88)
+            margin-bottom: rem(12)
+            +m
+                width: rem(66)
+        &:nth-child(2)
+            width: rem(128)
+            +m
+                width: rem(88)

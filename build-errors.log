@@ -1,0 +1,13 @@
+[31mFailed to compile.[39m
+[31m[39m
+[36m./node_modules/reselect/dist/reselect.d.ts[39m:[33m8[39m:[33m122[39m
+[31m[1mType error[22m[39m: '?' expected.
+
+[0m [90m  6 | [39m[90m * @internal[39m[0m
+[0m [90m  7 | [39m[90m */[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 | [39mtype [33mLongestTuple[39m[33m<[39m[33mArrayOfTuples[39m [36mextends[39m readonly unknown[][][33m>[39m [33m=[39m [33mArrayOfTuples[39m [36mextends[39m [infer [33mFirstArray[39m [36mextends[39m unknown[]] [33m?[39m [33mFirstArray[39m [33m:[39m [33mArrayOfTuples[39m [36mextends[39m [[0m
+[0m [90m    | [39m                                                                                                                         [31m[1m^[22m[39m[0m
+[0m [90m  9 | [39m    infer [33mFirstArray[39m[33m,[39m[0m
+[0m [90m 10 | [39m    [33m...[39minfer [33mRestArrays[39m [36mextends[39m unknown[][][0m
+[0m [90m 11 | [39m] [33m?[39m [33mLongerOfTwo[39m[33m<[39m[33mFirstArray[39m[33m,[39m [33mLongestTuple[39m[33m<[39m[33mRestArrays[39m[33m>>[39m [33m:[39m never[33m;[39m[0m
+[?25h

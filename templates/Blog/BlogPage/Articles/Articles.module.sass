@@ -1,0 +1,132 @@
+@import @/styles/helpers
+
+.item
+    display: flex
+    color: $n7
+    +t
+        min-height: rem(600)
+    +m
+        display: block
+        min-height: auto
+        &:not(:last-child)
+            margin-bottom: rem(40)
+    &:nth-child(2n)
+        flex-direction: row-reverse
+
+.preview,
+.details
+    flex: 0 0 50%
+    width: 50%
+    +m
+        width: 100%
+
+.preview
+    position: relative
+    overflow: hidden
+    &:before
+        content: ""
+        display: block
+        padding-bottom: 100%
+    img
+        transition: all .2s
+    .button
+        position: absolute
+        top: 50%
+        left: 50%
+        z-index: 2
+        transform: translate(-50%,-50%)
+        pointer-events: none
+        opacity: 0
+        white-space: nowrap
+    &:hover
+        img
+            transform: scale(1.03)
+            filter: blur(rem(12))
+        .button
+            opacity: 1
+
+.details
+    display: flex
+    flex-direction: column
+    padding: rem(80)
+    +xl
+        padding: rem(64)
+    +d
+        padding: rem(40)
+    +t
+        padding: rem(40) rem(24)
+
+.title
+    margin-bottom: rem(32)
+    +d
+        margin-bottom: rem(16)
+    +t
+        +h3S
+
+.author
+    display: flex
+    align-items: center
+    margin-bottom: rem(64)
+    +t
+        margin-bottom: rem(32)
+
+.avatar
+    position: relative
+    flex-shrink: 0
+    width: rem(48)
+    height: rem(48)
+    margin-right: rem(20)
+    border: rem(4) solid $n1
+    border-radius: 50%
+    img
+        position: relative
+        z-index: 3
+        border-radius: 50%
+    &:before
+        content: ""
+        position: absolute
+        inset: rem(-4)
+        border: rem(1) solid $n7
+        border-radius: 50%
+    &.history
+        &:before
+            inset: rem(-3)
+            z-index: 1
+            background: $n1
+            border-color: transparent
+        &:after
+            content: ""
+            position: absolute
+            inset: rem(-4)
+            background: $grd
+            border-radius: 50%
+
+.name
+    margin: rem(-4) 0
+    +title
+
+.date
+    +captionBold
+    color: $n5
+
+.content
+    max-width: rem(530)
+    margin-top: auto
+    +body2
+    color: $n5
+
+.btns
+    padding: rem(80)
+    text-align: center
+    +xl
+        padding: rem(64)
+    +d
+        padding: rem(40) rem(40) rem(64)
+    +m
+        padding: 0 rem(24) rem(64)
+    .button
+        min-width: rem(308)
+        +m
+            min-width: 100%
+    .spinner
+        margin: 0 0 0 rem(12)

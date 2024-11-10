@@ -1,0 +1,43 @@
+@import @/styles/helpers
+
+.head
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: rem(32)
+    +d
+        margin-bottom: rem(16)
+
+.back
+    margin-left: rem(32)
+
+.title
+    +d
+        +h1S
+    +t
+        max-width: rem(460)
+    +m
+        +h3S
+
+.info
+    max-width: rem(475)
+    margin-bottom: rem(64)
+    +body1
+    color: $n5
+    +d
+        +body1M
+    +t
+        margin-bottom: rem(24)
+
+.content
+    max-width: rem(540)
+    margin-bottom: rem(56)
+    +body2
+    color: $n5
+    +d
+        +baseMedium
+    +t
+        max-width: 100%
+
+.button
+    margin-top: auto

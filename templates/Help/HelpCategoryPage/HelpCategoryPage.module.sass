@@ -1,0 +1,96 @@
+@import @/styles/helpers
+
+.row
+    display: flex
+    min-height: calc(100vh - rem(96))
+    +t
+        display: block
+        min-height: auto
+
+.col
+    flex: 0 0 50%
+    &:nth-child(1)
+        background: $a2
+    &:nth-child(2)
+        padding: rem(56) rem(80) rem(80)
+        +xl
+            padding: rem(48) rem(64) rem(64)
+        +w
+            padding: rem(32) rem(40) rem(64)
+        +d
+            padding: rem(24) rem(40) rem(40)
+        +t
+            padding: rem(40) rem(24)
+
+.wrap
+    position: sticky
+    top: 0
+    display: flex
+    flex-direction: column
+    height: 100%
+    max-height: calc(100vh - rem(96))
+    padding: rem(128) rem(80) rem(80)
+    overflow: hidden
+    +xl
+        padding: rem(64)
+    +w
+        padding: rem(64) rem(40)
+    +d
+        padding: rem(40)
+    +t
+        display: block
+        min-height: auto
+        padding: rem(40) rem(24)
+
+.head
+    display: flex
+    justify-content: space-between
+
+.title
+    margin-right: rem(32)
+    +m
+        +h3M
+
+.back
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: rem(80)
+    height: rem(80)
+    background: $n1
+    border-radius: 50%
+    box-shadow: 0 rem(20) rem(16) rem(-6) rgba(0, 0, 0, 0.15)
+    transition: all .2s
+    +m
+        width: rem(60)
+        height: rem(60)
+    svg
+        transition: fill .2s
+    &:hover
+        background: $n7
+        svg
+            fill: $n1
+
+.preview
+    position: relative
+    max-width: rem(500)
+    margin-left: rem(-80)
+    +xl
+        margin-left: rem(-96)
+    +t
+        max-width: rem(400)
+        margin: rem(-16) 0 rem(-24) rem(-80)
+    +m
+        margin: rem(-40) 0 rem(-72) rem(-80)
+    &:before
+        content: ""
+        display: block
+        padding-bottom: 100%
+
+.form
+    margin-bottom: rem(64)
+    +t
+        margin-bottom: rem(48)
+    +m
+        margin-bottom: rem(24)

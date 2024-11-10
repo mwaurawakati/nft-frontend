@@ -1,0 +1,35 @@
+@import @/styles/helpers
+
+.create
+    text-align: center
+
+.box
+    padding: rem(120) rem(40)
+    border-radius: rem(32)
+    background: $o7-50
+    border: rem(2) dashed $o7-50
+
+.title
+    margin-bottom: rem(8)
+    color: $n1
+    +d
+        +h4S
+
+.text
+    margin-bottom: rem(40)
+    +baseMedium
+    color: $n5
+    +d
+        max-width: rem(250)
+        margin: 0 auto rem(40)
+
+.link
+    display: inline-block
+    margin-top: rem(64)
+    +base
+    color: $n5
+    transition: color .2s
+    +w
+        margin-top: rem(48)
+    &:hover
+        color: $n1

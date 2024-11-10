@@ -1,0 +1,83 @@
+@import @/styles/helpers
+
+.item
+    display: flex
+    align-items: center
+    padding: rem(40) rem(72) rem(40) rem(80)
+    border-bottom: rem(1) solid $n3
+    transition: box-shadow .2s, background .2s
+    +xl
+        padding: rem(40) rem(56) rem(40) rem(64)
+    +w
+        padding: rem(40) rem(32) rem(40) rem(40)
+    +t
+        padding: rem(32) rem(24)
+    &:hover
+        background: $n1
+        +shadow1
+
+.number
+    flex-shrink: 0
+    filter: drop-shadow(0 rem(8) rem(8) rgba(0, 0, 0, 0.06))
+    +d
+        display: none
+    +m
+        display: block
+
+.inner
+    display: flex
+    justify-content: center
+    align-items: center
+    width: rem(40)
+    height: rem(40)
+    clip-path: url(#polygonNumber)
+    background: $n1
+    +base
+    color: $n7
+
+.artist
+    display: flex
+    align-items: center
+    flex-grow: 1
+    padding: 0 rem(24) 0 rem(60)
+    +w
+        padding: 0 rem(16) 0 rem(24)
+    +d
+        padding-left: 0
+    +m
+        padding: 0 0 0 rem(20)
+
+.avatar
+    position: relative
+    flex-shrink: 0
+    width: rem(80)
+    height: rem(80)
+    margin-right: rem(24)
+    +m
+        width: rem(64)
+        height: rem(64)
+        margin-right: rem(20)
+    img
+        border-radius: 50%
+
+.name,
+.crypto
+    margin-bottom: rem(4)
+    +body1
+    color: $n7
+
+.sale,
+.price
+    +base
+    color: $n5
+    span
+        color: $n7
+
+.info
+    flex-shrink: 0
+    width: rem(120)
+    text-align: right
+    +m
+        display: none
+
+

@@ -1,0 +1,114 @@
+@import @/styles/helpers
+
+.follower
+    display: flex
+    align-items: center
+    padding: rem(32) 0
+    border-bottom: rem(1) solid $n7
+    .follow
+        margin-left: rem(12)
+        +w
+            margin-left: 0
+        +m
+            width: rem(52)
+            min-width: rem(52)
+            padding: 0
+            font-size: 0
+            svg
+                margin: 0
+
+.user
+    display: flex
+    align-items: center
+    flex: 0 0 calc(100% - rem(300))
+    width: calc(100% - rem(300))
+    +w
+        flex: 0 0 calc(100% - rem(288))
+        width: calc(100% - rem(288))
+    +d
+        flex: 0 0 calc(100% - rem(160))
+        width: calc(100% - rem(160))
+        padding-right: rem(20)
+    +t
+        flex: 0 0 calc(100% - rem(288))
+        width: calc(100% - rem(288))
+    +m
+        flex: 0 0 calc(100% - rem(52))
+        width: calc(100% - rem(52))
+
+.avatar
+    position: relative
+    flex-shrink: 0
+    width: rem(80)
+    height: rem(80)
+    border: rem(4) solid $n8
+    border-radius: 50%
+    img
+        position: relative
+        z-index: 3
+        border-radius: 50%
+    &:after
+        content: ""
+        position: absolute
+        top: rem(-4)
+        left: rem(-4)
+        right: rem(-4)
+        bottom: rem(-4)
+        z-index: 1
+        border: rem(1) solid $n6
+        border-radius: 50%
+    &.history
+        &:after
+            border: none
+            background: $grd
+        &:before
+            content: ""
+            position: absolute
+            top: rem(-3)
+            left: rem(-3)
+            right: rem(-3)
+            bottom: rem(-3)
+            z-index: 2
+            background: $n8
+            border-radius: 50%
+
+.details
+    flex: 0 0 calc(100% - rem(80))
+    width: calc(100% - rem(80))
+    padding-left: rem(20)
+
+.name
+    margin-bottom: rem(4)
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    +body1
+    color: $n1
+    +w
+        +body1M
+
+.login
+    +base
+    color: $n5
+
+.created
+    flex-shrink: 0
+    width: rem(128)
+    margin-right: auto
+    text-align: center
+    +base
+    +w
+        padding-right: rem(8)
+    +d
+        display: none
+    +t
+        display: block
+    +m
+        display: none
+
+.text
+    margin-bottom: rem(8)
+    color: $n5
+
+.crypto
+    color: $a4

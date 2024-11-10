@@ -1,0 +1,46 @@
+@import @/styles/helpers
+
+.users
+    display: flex
+    align-items: center
+    &.usersBorder
+        .user,
+        .counter
+            border: rem(1) solid $n7
+    &.usersDark
+        .user,
+        .counter
+            border-color: $n3
+
+.group
+    display: flex
+
+.title
+    margin-right: rem(12)
+    +base
+    color: $n5
+
+.user
+    position: relative
+    flex-shrink: 0
+    width: rem(32)
+    height: rem(32)
+    border-radius: 50%
+    font-size: 0
+    img
+        border-radius: 50%
+    &:not(:nth-child(1))
+        margin-left: rem(-8)
+
+.counter
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: rem(32)
+    height: rem(32)
+    margin-left: rem(-8)
+    background: $n1
+    border-radius: 50%
+    +captionSmall

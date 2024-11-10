@@ -1,0 +1,103 @@
+@import @/styles/helpers
+
+.item
+    padding-bottom: rem(48)
+    border-bottom: rem(1) solid $n3
+    +m
+        padding-bottom: rem(24)
+    &.active
+        .plus
+            &:after
+                transform: translate(-50%,-50%) rotate(90deg)
+        .body
+            display: block
+    &:not(:last-child)
+        margin-bottom: rem(48)
+        +m
+            margin-bottom: rem(24)
+
+.head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    cursor: pointer
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    transition: color .2s
+    +m
+        +h4S
+    &:hover
+        color: $s2
+
+.plus
+    position: relative
+    flex-shrink: 0
+    width: rem(24)
+    height: rem(24)
+    margin: rem(2) rem(4) 0 rem(40)
+    border: rem(1) solid $n5
+    border-radius: 50%
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        background: $n5
+    &:before
+        width: rem(10)
+        height: rem(1)
+    &:after
+        width: rem(1)
+        height: rem(10)
+        transition: transform .2s
+
+.body
+    display: none
+    padding-top: rem(40)
+
+.link
+    position: relative
+    display: block
+    padding-left: rem(40)
+    +body2Bold
+    color: $n5
+    transition: color .2s
+    svg
+        position: absolute
+        top: rem(4)
+        left: 0
+        transform: translateX(rem(-4))
+        fill: $s2
+        opacity: 0
+        transition: all .2s
+    &:hover
+        color: $n7
+        svg
+            transform: translateX(0)
+            opacity: 1
+        .circle
+            opacity: 0
+    &:not(:last-child)
+        margin-bottom: rem(24)
+
+.circle
+    position: absolute
+    top: rem(4)
+    left: 0
+    width: rem(24)
+    height: rem(24)
+    border: rem(2) solid $s2
+    border-radius: 50%
+    transition: all .2s
+    &:before
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        width: rem(4)
+        height: rem(4)
+        border-radius: 50%
+        transform: translate(-50%,-50%)
+        background: $s2 
+

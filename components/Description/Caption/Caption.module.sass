@@ -1,0 +1,42 @@
+@import @/styles/helpers
+
+.caption
+    margin-bottom: auto
+    padding-bottom: rem(40)
+
+.line
+    display: flex
+    justify-content: space-between
+    margin-bottom: rem(24)
+    +m
+        margin-bottom: rem(16)
+
+.title
+    +m
+        padding-top: rem(4)
+        font-size: rem(32)
+        line-height: rem(40)
+
+.actions
+    display: flex
+    margin: rem(8) 0 0 rem(16)
+    +d
+        margin-top: 0
+
+.button
+    &:not(:last-child)
+        margin-right: rem(24)
+        +m
+            margin-right: rem(12)
+
+.date
+    display: flex
+    align-items: center
+    +captionBold
+    color: $n5
+    svg
+        flex-shrink: 0
+        width: rem(16)
+        height: rem(16)
+        margin-right: rem(12)
+        fill: $n5

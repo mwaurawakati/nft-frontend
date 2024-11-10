@@ -1,0 +1,42 @@
+@import @/styles/helpers
+
+.link
+    display: flex
+    justify-content: space-between
+    align-items: center
+    svg
+        flex-shrink: 0
+        width: rem(40)
+        height: rem(40)
+        margin-left: rem(24)
+        fill: $n6
+        transition: fill .2s
+        +w
+            width: rem(32)
+            height: rem(32)
+        +d
+            width: rem(24)
+            height: rem(24)
+    &:hover,
+    &.active
+        .hover
+            opacity: 1
+    &.active
+        svg
+            fill: $n1
+
+.title
+    position: relative
+    padding: rem(8) 0
+    color: $n1
+
+.hover
+    position: absolute
+    top: 0
+    left: 0
+    padding: rem(8) 0
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-image: $grd
+    opacity: 0
+    transition: opacity .2s

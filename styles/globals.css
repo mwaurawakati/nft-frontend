@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ::::::::::::::::::::::::::::::::::::::: SHORT-HAND CLASSES */
+.ease-100 {
+  @apply transition-all duration-[100ms] ease-in-out;
+}
+.ease-150 {
+  @apply transition-all duration-[150ms] ease-in-out;
+}
+.ease-200 {
+  @apply transition-all duration-[200ms] ease-in-out;
+}
+.ease-250 {
+  @apply transition-all duration-[250ms] ease-in-out;
+}
+.ease-300 {
+  @apply transition-all duration-[300ms] ease-in-out;
+}
+.ease-500 {
+  @apply transition-all duration-[500ms] ease-in-out;
+}

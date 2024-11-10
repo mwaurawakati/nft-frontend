@@ -1,0 +1,81 @@
+@import @/styles/helpers
+
+.price
+    border-radius: rem(24)
+    background: $n1
+    box-shadow: 0 rem(40) rem(48) rem(-24) rgba(0, 0, 0, 0.1)
+
+.body,
+.content
+    padding: rem(32)
+    +xl
+        padding: rem(24)
+    +m
+        padding: rem(16)
+
+.title
+    +title
+    color: $n5
+    strong
+        font-weight: 700
+        color: $n7
+
+.wrap
+    margin-bottom: rem(40)
+    +xl
+        margin-bottom: rem(24)
+
+.box
+    position: relative
+    .input
+        padding-right: rem(120)
+        font-size: rem(48)
+        font-weight: 800
+        +m
+            font-size: rem(40)
+        &::placeholder
+            color: $n4
+    .currency
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translateY(-50%)
+        pointer-events: none
+        +m
+            font-size: rem(40)
+
+.line,
+.flex
+    display: flex
+    align-items: center
+    padding: rem(24) 0
+    +xl
+        padding: rem(16) 0
+
+.line
+    &:not(:last-child)
+        border-bottom: rem(1) solid $n3
+
+.flex
+    border-bottom: rem(1) solid $n3
+    .currency
+        margin-left: auto
+
+.label
+    margin-right: auto
+    padding-right: rem(20)
+    +base
+    color: $n5
+
+.value,
+.percent
+    +base
+
+.percent
+    margin-right: rem(16)
+    color: $n4
+
+.content
+    border-top: rem(1) solid $n3
+    +caption
+    color: $n5

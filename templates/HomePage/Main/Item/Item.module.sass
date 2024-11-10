@@ -1,0 +1,63 @@
+@import @/styles/helpers
+
+.item
+    display: flex
+    box-sizing: border-box
+    +t
+        display: block
+
+.preview,
+.wrap
+    flex: 0 0 50%
+    width: 50%
+    +t
+        width: 100%
+
+.preview
+    position: relative
+    font-size: 0
+    &:before
+        content: ""
+        display: block
+        padding-bottom: 100%
+
+.wrap
+    display: flex
+    flex-direction: column
+    padding: rem(80)
+    background: $a4
+    +xl
+        padding: rem(80) rem(64)
+    +w
+        padding: rem(64) rem(40)
+    +d
+        padding: rem(40)
+    +t
+        padding: rem(48) rem(24)
+
+.subtitle
+    margin-bottom: rem(40)
+    +w
+        +h1M
+    +d
+        margin-bottom: rem(32)
+    +m
+        +h1S
+
+.btns
+    display: flex
+    margin: 0 rem(-12)
+    +m
+        display: block
+        margin: 0
+
+.button
+    flex: 0 0 calc(50% - rem(24))
+    width: calc(50% - rem(24))
+    height: rem(64)
+    margin: 0 rem(12)
+    +m
+        width: 100%
+        margin: 0
+        &:not(:last-child)
+            margin-bottom: rem(16)

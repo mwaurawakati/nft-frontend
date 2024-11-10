@@ -1,0 +1,48 @@
+@import @/styles/helpers
+
+.row
+    display: flex
+    min-height: calc(100vh - rem(96))
+    +t
+        display: block
+        min-height: auto
+
+.col
+    flex: 0 0 50%
+    &:nth-child(2)
+        background: $n2
+
+.wrap
+    position: sticky
+    top: 0
+    display: flex
+    flex-direction: column
+    height: 100%
+    max-height: calc(100vh - rem(96))
+    padding: rem(80)
+    +xl
+        padding: rem(64)
+    +w
+        padding: rem(64) rem(40)
+    +d
+        padding: rem(40)
+    +t
+        min-height: auto
+        padding: rem(40) rem(24)
+ 
+.title
+    margin-bottom: rem(40)
+    +w
+        margin-bottom: rem(24)
+        +heroS
+    +m
+        margin-bottom: rem(16)
+        font-size: rem(48)
+        line-height: rem(48)
+
+.content
+    margin-bottom: auto
+    +body2
+    color: $n5
+    +t
+        margin-bottom: rem(16)

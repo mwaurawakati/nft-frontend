@@ -1,0 +1,131 @@
+@import @/styles/helpers
+
+.header
+    box-shadow: none !important
+
+.wrapper
+    padding: 0 rem(40) rem(40)
+    +w
+        padding: 0 rem(24) rem(24)
+    +m
+        padding: 0 rem(16) rem(24)
+
+.inner
+    position: relative
+    display: flex
+    min-height: calc(100vh - rem(136))
+    padding: rem(40)
+    border-radius: rem(40)
+    background: $n1
+    box-shadow: 0 rem(32) rem(80) rem(-16) rgba(0, 0, 0, 0.1)
+    +w
+        min-height: calc(100vh - rem(120))
+        padding: rem(24)
+        border-radius: rem(24)
+    +t
+        border-radius: rem(32)
+    +m
+        padding: rem(24) rem(16)
+
+.close
+    position: absolute
+    top: rem(32)
+    right: rem(32)
+    +t
+        top: rem(8)
+        right: rem(8)
+        width: rem(52)
+        height: rem(52)
+        background: $n1
+
+.row
+    display: flex
+    align-items: center
+    flex-grow: 1
+    margin: 0 rem(-60)
+    +xl
+        margin: 0
+    +t
+        display: block
+
+.col
+    flex: 0 0 calc(50% - rem(120))
+    width: calc(50% - rem(120))
+    margin: 0 rem(60)
+    +xl
+        margin: 0
+    &:nth-child(1)
+        +xl
+            flex: 0 0 rem(512)
+            width: rem(512)
+        +w
+            flex: 0 0 rem(358)
+            width: rem(358)
+        +t
+            width: 100%
+            margin-bottom: rem(40)
+    &:nth-child(2)
+        padding: rem(48) 0
+        +xl
+            flex: 0 0 calc(100% - rem(512))
+            width: calc(100% - rem(512))
+            padding: 0 0 0 rem(128)
+        +w
+            flex: 0 0 calc(100% - rem(358))
+            width: calc(100% - rem(358))
+            padding-left: rem(64)
+        +t
+            width: 100%
+            padding: 0
+
+.title
+    margin-bottom: rem(32)
+    +xl
+        +h1M
+    +w
+        +h1S
+    +m
+        margin-bottom: rem(8)
+        +h3S
+
+.info
+    margin-bottom: rem(60)
+    +body1
+    color: $n5
+    +w
+        margin-bottom: rem(24)
+        +body1S
+
+.socials
+    display: flex
+    flex-wrap: wrap
+
+.social
+    display: flex
+    justify-content: center
+    align-items: center
+    flex: 0 0 50%
+    width: 50%
+    height: rem(304)
+    border-top: rem(1) solid $n3
+    transition: box-shadow .2s
+    +w
+        height: rem(200)
+    +t
+        height: rem(155)
+    &:hover
+        +shadow1
+    &:nth-child(2n+1)
+        border-right: rem(1) solid $n3
+    &:nth-child(1),
+    &:nth-child(2)
+        border-top: none
+    svg
+        width: rem(48)
+        height: rem(48)
+        fill: $n5
+        transition: fill .2s
+    &:hover
+        .icon
+            fill: $n7
+

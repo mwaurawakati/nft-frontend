@@ -1,0 +1,126 @@
+@import @/styles/helpers
+
+.details
+    position: sticky
+    top: 0
+    display: flex
+    flex-direction: column
+    min-height: rem(800)
+    padding: rem(100) rem(80) rem(80)
+    +xl
+        min-height: rem(720)
+        padding: rem(100) rem(64) rem(80)
+    +w
+        padding: rem(100) rem(40) rem(80)
+    +t
+        display: block
+        min-height: auto
+        padding: rem(100) rem(24) rem(48)
+    .follow
+        margin-top: rem(8)
+        padding: 0 rem(30)
+        +d
+            min-width: rem(88)
+            margin-top: 0
+            padding: 0 rem(12)
+            font-size: 0
+            svg
+                margin: 0
+        +t
+            min-width: auto
+            padding: 0 rem(30)
+            font-size: rem(12)
+            svg
+                margin-left: rem(12)
+        +m
+            margin-top: rem(32)
+
+.head
+    margin-bottom: auto
+
+.flex
+    display: flex
+    justify-content: space-between
+    margin-bottom: rem(40)
+    +m
+        display: block
+        margin-bottom: rem(32)
+
+.user
+    margin-bottom: rem(8)
+    +m
+        +h2M
+
+.line
+    display: flex
+    align-items: center
+
+.login
+    +body1
+    color: $n5
+    +d
+        +body1M
+
+.code
+    display: flex
+    align-items: center
+    margin-left: rem(20)
+    padding: rem(8) rem(12)
+    border-radius: rem(12)
+    background: $a2
+    +base
+    +d
+        +baseM
+
+.copy
+    margin-left: rem(8)
+    font-size: 0
+    svg
+        width: rem(20)
+        height: rem(20)
+
+.actions
+    display: flex
+    margin: 0 rem(-20)
+    +m
+        justify-content: space-between
+        margin: 0
+
+.action
+    flex: 0 0 calc(33.333% - rem(40))
+    width: calc(33.333% - rem(40))
+    margin: 0 rem(20)
+    cursor: pointer
+    transition: color .2s
+    +m
+        flex: 0 0 auto
+        width: auto
+        margin: 0
+    &:hover,
+    &.active
+        color: $s2
+
+.counter
+    +d
+        +h4S
+
+.subtitle
+    display: flex
+    align-items: center
+    margin-top: rem(8)
+    +base
+    color: $n5
+    +d
+        +baseM
+    +m
+        +baseS
+    svg
+        width: rem(20)
+        height: rem(20)
+        margin-right: rem(4)
+        fill: $n5
+        +m
+            width: rem(16)
+            height: rem(16)
+
+

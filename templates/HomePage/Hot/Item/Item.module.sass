@@ -1,0 +1,97 @@
+@import @/styles/helpers
+
+.item
+    position: relative
+    flex: 0 0 50%
+    width: 50%
+    padding: rem(94) rem(32)
+    border-width: rem(1) rem(1) 0 0
+    border-style: solid
+    border-color: $n3
+    text-align: center
+    transition: all .2s
+    +w
+        padding: rem(56) rem(20)
+    +d
+        padding: rem(44) rem(12)
+    &:hover
+        box-shadow: 0 rem(62) rem(48) rem(-16) rgba(0, 0, 0, 0.1)
+        background: $n1
+        .avatar
+            &:before
+                transform: scale(1)
+                +d
+                    transform: scale(.9)
+        .number
+            box-shadow: none
+        .inner
+            background: $n7
+            color: $n1
+
+.number
+    position: absolute
+    top: rem(24)
+    right: rem(24)
+    filter: drop-shadow(0 rem(8) rem(8) rgba(0, 0, 0, 0.06))
+    transition: all .2s
+    +d
+        top: rem(8)
+        right: rem(8)
+
+.inner
+    display: flex
+    justify-content: center
+    align-items: center
+    width: rem(40)
+    height: rem(40)
+    clip-path: url(#polygonNumber)
+    background: $n1
+    +base
+    color: $n7
+    transition: all .2s
+    
+.avatar
+    position: relative
+    flex-shrink: 0
+    width: rem(120)
+    height: rem(120)
+    margin: 0 auto rem(32)
+    +d
+        width: rem(104)
+        height: rem(104)
+        margin-bottom: rem(16)
+    img
+        border-radius: 50%
+    &:before
+        content: ""
+        position: absolute
+        top: rem(-20)
+        left: rem(-20)
+        right: rem(-20)
+        bottom: rem(-20)
+        border: rem(1) solid $n3
+        border-radius: 50%
+        pointer-events: none
+        transform: scale(.7)
+        transition: transform .2s
+        +t
+            display: none
+
+.login
+    margin-bottom: rem(4)
+    +body1
+    color: $n7
+    +d
+        +body1M
+    +m
+        +body1S
+
+.total
+    +base
+    color: $n5
+    +m
+        +baseS
+    span
+        color: $n7
+
+        

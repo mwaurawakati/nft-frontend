@@ -1,0 +1,44 @@
+@import @/styles/helpers
+
+.head
+    display: flex
+    justify-content: space-between
+    margin-bottom: rem(64)
+    +xl
+        +h3M
+    +w
+        margin-bottom: rem(40)
+        +h3S
+    +m
+        margin-bottom: 0
+
+.title
+    color: $n1
+
+.counter
+    color: $n5
+
+.list
+    max-height: rem(725)
+    margin-right: rem(-64)
+    padding-right: rem(56)
+    overflow: auto
+    -webkit-overflow-scrolling: touch
+    +xl
+        margin-right: rem(-48)
+        padding-right: rem(40)
+    +w
+        margin-right: rem(-24)
+        padding-right: rem(16)
+    +t
+        padding-right: rem(24)
+    &::-webkit-scrollbar
+        width: rem(8)
+    &::-webkit-scrollbar-track
+        background-color: $n7
+        border: rem(2) solid $n7
+        border-radius: rem(4)
+    &::-webkit-scrollbar-thumb
+        background-color: $n8
+        border: rem(2) solid $n7
+        border-radius: rem(4)

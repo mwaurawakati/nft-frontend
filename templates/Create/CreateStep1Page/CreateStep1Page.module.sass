@@ -1,0 +1,35 @@
+@import @/styles/helpers
+
+.head
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: rem(32)
+
+.back
+    margin-left: rem(32)
+
+.info
+    max-width: rem(475)
+    margin-bottom: rem(64)
+    +body1
+    color: $n5
+    +w
+        margin-bottom: rem(32)
+    +m
+        +body1S
+
+.form
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+
+.field
+    margin-bottom: rem(40)
+    +w
+        margin-bottom: rem(24)
+
+.button
+    margin-top: auto
+    +m
+        margin-top: rem(16)

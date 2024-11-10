@@ -1,0 +1,30 @@
+@import @/styles/helpers
+
+.cover
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    height: rem(304)
+    background: $n2
+    border-bottom: rem(1) solid $n3
+
+.file
+    position: absolute
+    inset: 0
+    opacity: 0
+
+.details
+    padding: rem(48)
+    text-align: center
+    pointer-events: none
+
+.title
+    margin-bottom: rem(8)
+    +title
+    +m
+        +body2Bold
+
+.info
+    +baseMedium
+    color: $n5

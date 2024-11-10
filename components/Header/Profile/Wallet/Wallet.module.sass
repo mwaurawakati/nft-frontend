@@ -1,0 +1,85 @@
+@import @/styles/helpers
+
+.head
+    display: flex
+    align-items: center
+    margin-bottom: rem(24)
+    +xl
+        margin-bottom: rem(8)
+
+.title
+    margin-right: auto
+    +title
+    color: $n5
+    +w
+        +base
+
+.actions
+    display: flex
+    flex-wrap: wrap
+    margin-top: rem(-8)
+
+.action
+    display: flex
+    align-items: center
+    margin: rem(8) 0 0 rem(32)
+    +title
+    color: $n1
+    +w
+        +base
+    svg
+        margin-right: rem(12)
+        fill: $n5
+        transition: fill .2s
+    &:nth-child(1)
+        +d
+            display: none
+    &:hover
+        svg
+            fill: $n1
+
+.details
+    margin-bottom: rem(24)
+    padding: rem(32) rem(40)
+    border-radius: rem(24)
+    background: $o7-75
+    +xl
+        padding: rem(16)
+
+.code
+    display: inline-flex
+    align-items: center
+    margin-bottom: rem(12)
+    padding: rem(8)
+    background: $o6
+    border-radius: rem(12)
+    +base
+    color: $n1
+    +xl
+        +baseS
+    &:after
+        content: ""
+        display: block
+        width: rem(16)
+        height: rem(16)
+        margin-left: rem(12)
+        border-radius: 50%
+        background: $a4
+
+.line
+    display: flex
+    justify-content: space-between
+    +rh(900)
+        +h3M
+    +xl
+        +h3S
+    +d
+        +h3S
+    +m
+        +h4S
+
+.crypto
+    color: $n3
+
+.price
+    color: $n5

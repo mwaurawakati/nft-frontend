@@ -1,0 +1,40 @@
+@import @/styles/helpers
+
+.links
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin: rem(48) rem(-16) 0
+    padding-top: rem(32)
+    +w
+        flex-direction: column
+    +d
+        margin-top: rem(40)
+    +m
+        margin-top: rem(24)
+        padding-top: rem(8)
+    &:before
+        content: ""
+        position: absolute
+        top: 0
+        left: rem(16)
+        right: rem(16)
+        height: rem(1)
+        background: $n3
+
+.link
+    display: flex
+    align-items: center
+    margin: rem(16) rem(16) 0
+    +base
+    color: $n7
+    transition: color .2s
+    svg
+        margin-right: rem(16)
+        fill: $n7
+        transition: fill .2s
+    &:hover
+        color: $s2
+        svg
+            fill: $s2

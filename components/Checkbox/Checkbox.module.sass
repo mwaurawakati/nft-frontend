@@ -1,0 +1,61 @@
+@import ../../styles/helpers
+
+.checkbox
+    position: relative
+    display: flex
+    align-items: center
+    user-select: none
+    cursor: pointer
+    &:hover
+        .tick
+            border-color: $n7
+
+.input
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    visibility: hidden
+    &:checked + .inner 
+        .tick 
+            background: $n7
+            border-color: $n7
+            &:before
+                opacity: 1
+
+.inner
+    display: flex
+    align-items: flex-start
+    width: 100%
+
+.tick
+    position: relative
+    flex-shrink: 0
+    width: rem(32)
+    height: rem(32)
+    margin: rem(2) rem(20) 0 0
+    border-radius: rem(8)
+    border: rem(2) solid $n3
+    background: transparent
+    transition: background .2s, border-color .2s
+    &:before
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        width: rem(19)
+        height: rem(12)
+        transform: translate(-50%,-50%)
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='14' viewBox='0 0 19 14'%3E%3Cpath d='M18.276.391c.521.521.521 1.365 0 1.886L7.609 12.943c-.521.521-1.365.521-1.886 0L.391 7.609c-.521-.521-.521-1.365 0-1.886s1.365-.521 1.886 0l4.391 4.391L16.391.391c.521-.521 1.365-.521 1.886 0z' fill='%23f7fbfa' fill-rule='evenodd'/%3E%3C/svg%3E") no-repeat 50% 50% / 100% auto
+        opacity: 0
+        transition: opacity .2s
+
+.label
+    padding-top: rem(7)
+    font-size: rem(18)
+    line-height: 1.2
+    letter-spacing: -0.01em
+    font-weight: 700
+    color: $n7
+
+        

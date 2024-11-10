@@ -1,0 +1,87 @@
+@import @/styles/helpers
+
+.list
+    display: flex
+    margin: 0 rem(-20)
+    +d
+        margin: 0 rem(-12)
+    +m
+        display: block
+        margin: 0
+
+.item
+    flex: 0 0 calc(50% - rem(40))
+    width: calc(50% - rem(40))
+    margin: 0 rem(20)
+    +d
+        flex: 0 0 calc(50% - rem(24))
+        width: calc(50% - rem(24))
+        margin: 0 rem(12)
+    +m
+        width: 100%
+        margin: 0
+        &:not(:last-child)
+            margin-bottom: rem(24)
+
+.label
+    margin-bottom: rem(12)
+    +captionBold
+    color: $n5
+
+.flex
+    display: flex
+
+.avatar,
+.image
+    position: relative
+    flex-shrink: 0
+    width: rem(48)
+    height: rem(48)
+    margin-right: rem(20)
+
+.avatar
+    position: relative
+    border: rem(4) solid $n1
+    border-radius: 50%
+    img
+        position: relative
+        z-index: 3
+        border-radius: 50%
+    &:before
+        content: ""
+        position: absolute
+        inset: rem(-4)
+        border: rem(1) solid $n7
+        border-radius: 50%
+    &.history
+        &:before
+            inset: rem(-3)
+            z-index: 1
+            background: $n1
+            border-color: transparent
+        &:after
+            content: ""
+            position: absolute
+            inset: rem(-4)
+            background: $grd
+            border-radius: 50%
+
+.image
+    img
+        border-radius: rem(12)
+
+.title
+    +base
+
+.login
+    margin-top: rem(2)
+    +captionBold
+    color: $n5
+
+.category
+    display: inline-block
+    padding: 0 rem(8)
+    border-radius: rem(6)
+    background: $o3
+    +button
+    color: $n5

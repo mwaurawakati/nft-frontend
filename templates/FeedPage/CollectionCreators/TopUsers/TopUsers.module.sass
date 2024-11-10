@@ -1,0 +1,78 @@
+@import @/styles/helpers
+
+.title
+    max-width: rem(340)
+    margin-bottom: rem(24)
+    +w
+        +h4S
+    +t
+        max-width: 100%
+        font-size: rem(32)
+        line-height: rem(40)
+
+.list
+    margin: 0 rem(-80)
+    +xl
+        margin: 0 rem(-64)
+    +w
+        margin: 0 rem(-40)
+    +t
+        margin: 0 rem(-24)
+
+.item
+    display: flex
+    align-items: center
+    padding: rem(48) rem(80)
+    border-bottom: rem(1) solid $n3
+    transition: box-shadow .2s, border-color .2s
+    +xl
+        padding: rem(48) rem(64)
+    +w
+        padding: rem(40)
+    +t
+        padding: rem(24) rem(40)
+    +t
+        padding: rem(24)
+    &:hover
+        border-color: transparent
+        +shadow1
+
+.avatar
+    position: relative
+    flex-shrink: 0
+    width: rem(80)
+    height: rem(80)
+    margin-right: rem(24)
+    +m
+        margin-right: rem(16)
+    img
+        border-radius: 50%
+
+.details
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-grow: 1
+
+.box
+    &:nth-child(2)
+        flex-shrink: 0
+        margin-left: rem(16)
+        text-align: right
+        +w
+            position: relative
+            top: rem(-4)
+
+.name,
+.sale
+    +body1
+    color: $n7
+    +w
+        +body1S
+
+.login,
+.text
+    +body2Bold
+    color: $n5
+    +w
+        font-size: rem(16)

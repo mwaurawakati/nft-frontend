@@ -1,0 +1,43 @@
+@import @/styles/helpers
+
+.timer
+    display: flex
+
+.item
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    flex-shrink: 0
+    min-width: rem(75)
+    +w
+        min-width: rem(50)
+    +m
+        min-width: rem(45)
+    &:not(:last-child)
+        margin-right: rem(24)
+        +m
+            margin-right: rem(20)
+
+.value
+    +w
+        font-size: rem(32)
+        line-height: rem(40)
+    +m
+        +h4S
+
+.text
+    margin-top: rem(8)
+    +title
+    color: $n2
+    +w
+        +base
+    +m
+        +baseS
+    span
+        &:nth-child(1)
+            +m
+                display: none
+        &:nth-child(2)
+            display: none
+            +m
+                display: inline

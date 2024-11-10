@@ -1,0 +1,69 @@
+@import @/styles/helpers
+
+.spotlight
+    padding: rem(80)
+    background: $n8
+    +xl
+        padding: rem(64)
+    +w
+        padding: rem(64) rem(40)
+    +d
+        padding: rem(40)
+    +t
+        padding: rem(40) rem(24)
+
+.head
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin-bottom: rem(64)
+    +w
+        margin-bottom: rem(48)
+    +m
+        display: block
+
+.details
+    margin-right: rem(40)
+    +m
+        margin: 0 0 rem(32)
+
+.title
+    margin-bottom: rem(20)
+    color: $n1
+
+.info
+    +body1
+    color: $n5
+    +w
+        +body1M
+
+.list
+    display: flex
+    flex-wrap: wrap
+    margin: rem(-64) rem(-20) 0
+    +w
+        margin: rem(-48) rem(-16) 0
+    +m
+        display: block
+        margin: 0
+
+.card
+    flex: 0 0 calc(25% - rem(40))
+    width: calc(25% - rem(40))
+    margin: rem(64) rem(20) 0
+    +w
+        flex: 0 0 calc(25% - rem(32))
+        width: calc(25% - rem(32))
+        margin: rem(48) rem(16) 0
+    +t
+        flex: 0 0 calc(50% - rem(32))
+        width: calc(50% - rem(32))
+    +m
+        width: 100%
+        margin: rem(32) 0 0
+
+.btns
+    margin-top: rem(64)
+    text-align: center
+    +w
+        margin-top: rem(48)

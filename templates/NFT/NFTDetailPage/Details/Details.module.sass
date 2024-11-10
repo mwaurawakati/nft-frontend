@@ -1,0 +1,125 @@
+@import @/styles/helpers
+
+@import @/styles/helpers
+
+.details
+    background: $n1
+    box-shadow: 0 rem(40) rem(48) rem(-24) rgba(0, 0, 0, 0.1)
+    border-radius: rem(24)
+
+.row
+    display: flex
+    +m
+        display: block
+
+.col
+    flex: 0 0 50%
+    padding: rem(32)
+    +w
+        padding: rem(24)
+    +m
+        padding: rem(16) rem(24)
+    &:nth-child(1)
+        border-right: rem(1) solid $n3
+    .button
+        margin-top: rem(20)
+        +m
+            margin-top: rem(12)
+
+.label
+    +title
+    color: $n5
+
+.value
+    display: flex
+    align-items: center
+    min-height: rem(40)
+    +d
+        min-height: rem(32)
+        +h4S
+    &:empty
+        &:before
+            content: ""
+            width: rem(160)
+            height: rem(24)
+            background: $n3
+            border-radius: rem(4)
+            +w
+                width: rem(120)
+            +d
+                width: rem(160)
+
+.foot
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: rem(32)
+    border-top: rem(1) solid $n3
+    +w
+        padding: rem(24)
+    +d
+        flex-wrap: wrap
+    +m
+        padding: rem(16) rem(24)
+        border: none
+
+.user
+    display: flex
+    align-items: center
+    margin: 0 rem(16)
+    +d
+        order: 3
+        margin: rem(16) 0 0
+    +m
+        order: 2
+        margin: 0 0 rem(16)
+
+.box
+    +m
+        flex: 0 0 100%
+        margin-bottom: rem(16)
+
+.avatar
+    position: relative
+    flex-shrink: 0
+    width: rem(48)
+    height: rem(48)
+    margin-right: rem(14)
+    border: rem(4) solid $n1
+    border-radius: 50%
+    img
+        position: relative
+        z-index: 3
+        border-radius: 50%
+    &:before
+        content: ""
+        position: absolute
+        inset: rem(-4)
+        border: rem(1) solid $n7
+        border-radius: 50%
+    &.history
+        &:before
+            inset: rem(-3)
+            z-index: 1
+            background: $n1
+            border-color: transparent
+        &:after
+            content: ""
+            position: absolute
+            inset: rem(-4)
+            background: $grd
+            border-radius: 50%
+
+.author
+    +base
+
+.code
+    margin-top: rem(2)
+    +captionBold
+    color: $n5
+
+.button
+    padding: 0 rem(22)
+    +m
+        order: 3
+        width: 100%

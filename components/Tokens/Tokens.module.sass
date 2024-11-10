@@ -1,0 +1,45 @@
+@import @/styles/helpers
+
+.head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: rem(64)
+    +w
+        margin-bottom: rem(48)
+    +m
+        margin-bottom: rem(40)
+    .user
+        +d
+            display: none
+        +m
+            display: block
+    .counter
+        +d
+            margin-left: 0
+        +m
+            margin-left: rem(-8)
+
+.tokens
+    display: flex
+    flex-wrap: wrap
+    margin: rem(-40) rem(-20) 0
+    +m
+        display: block
+        margin: 0
+    &.list
+        display: block
+        margin: 0
+        .token
+            width: 100%
+            margin: rem(48) 0 0
+            +m
+                margin-top: rem(40)
+
+.token
+    flex: 0 0 calc(50% - rem(40))
+    width: calc(50% - rem(40))
+    margin: rem(40) rem(20) 0
+    +m
+        width: 100%
+        margin: rem(40) 0 0

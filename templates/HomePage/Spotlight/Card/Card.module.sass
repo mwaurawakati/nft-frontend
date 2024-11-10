@@ -1,0 +1,63 @@
+@import @/styles/helpers
+
+.card
+    display: block
+    color: $n1
+    transition: color .2s
+    &:hover
+        color: $s2
+
+.preview
+    position: relative
+    margin-bottom: rem(24)
+    border-radius: rem(20)
+    overflow: hidden
+    &:before
+        content: ""
+        display: block
+        padding-bottom: 100%
+    img
+        border-radius: rem(20)
+        transition: transform 1s
+    &:hover
+        img
+            transform: scale(1.05)
+
+.line
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    +d
+        display: block
+    +t
+        display: flex
+
+.title
+    margin-bottom: rem(8)
+    +body1
+    +w
+        +body1M
+    +d
+        margin-bottom: 0
+    +t
+        margin-bottom: rem(8)
+
+.price
+    +base
+    color: $n1
+    +m
+        +baseS
+    span
+        color: $n5
+
+.users
+    flex-shrink: 0
+    margin-left: rem(12)
+    padding: rem(8)
+    +w
+        padding: 0
+    +d
+        margin: rem(16) 0 0 0
+    +t
+        margin: 0 0 0 rem(12)
+        padding: rem(8)

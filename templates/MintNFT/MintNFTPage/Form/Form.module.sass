@@ -1,0 +1,100 @@
+@import @/styles/helpers
+
+.head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: rem(32)
+    +m
+        margin-bottom: rem(24)
+
+.title
+    +w
+        +h3M
+    +m
+        +h3S
+
+.back
+    margin-left: rem(32)
+
+.info
+    max-width: rem(475)
+    margin-bottom: rem(64)
+    +body1
+    color: $n5
+    +d
+        margin-bottom: rem(40)
+    +m
+        margin-bottom: rem(16)
+        +body1M
+
+.field
+    &:not(:last-child)
+        margin-bottom: rem(40)
+
+.box
+    margin-bottom: rem(76)
+    +w
+        margin-bottom: rem(40)
+
+.category
+    margin-bottom: rem(12)
+    +body2Bold
+
+.collection
+    display: flex
+    align-items: center
+    padding: rem(20) rem(40) rem(20) rem(20)
+    border-radius: rem(20)
+    +shadow1
+    +m
+        padding: rem(20)
+
+.preview
+    position: relative
+    flex-shrink: 0
+    width: rem(96)
+    height: rem(96)
+    +m
+        width: rem(72)
+        height: rem(72)
+    img
+        border-radius: rem(16)
+
+.details
+    flex-grow: 1
+    padding: 0 rem(32)
+    +m
+        padding: 0 rem(24)
+
+.subtitle
+    margin-bottom: rem(4)
+    +body1
+    +m
+        +body1M
+
+.price
+    +body2Bold
+    color: $n4
+    +m
+        +base
+
+.check
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: rem(40)
+    height: rem(40)
+    background: $n7
+    border-radius: 50%
+    svg
+        fill: $n1
+
+.btns
+    display: flex
+    margin: 0 rem(-10)
+
+.button
+    flex: 0 0 calc(50% - rem(20))
+    margin: 0 rem(10)

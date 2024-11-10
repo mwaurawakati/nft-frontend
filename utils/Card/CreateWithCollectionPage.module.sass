@@ -1,0 +1,128 @@
+@import @/styles/helpers
+
+.title
+    margin-bottom: rem(64)
+    +w
+        margin-bottom: rem(40)
+    +m
+        margin-bottom: rem(32)
+
+.arrow
+    margin-bottom: auto
+
+.content
+    max-width: rem(540)
+    margin-top: rem(40)
+    +body2
+    color: $n5
+    +w
+        +body2M
+    +t
+        max-width: 100%
+
+.head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: rem(48)
+    +w
+        margin-bottom: rem(24)
+
+.subtitle
+    +body1
+    color: $n5
+
+.counter
+    padding: rem(2) rem(12)
+    background: $n3
+    border-radius: rem(12)
+    +body2Bold
+
+.add,
+.item
+    display: flex
+    align-items: center
+    margin-bottom: rem(24)
+    padding: rem(20)
+    background: $n1
+    border-radius: rem(20)
+
+.add
+    +body1
+    color: $n7
+    &:hover
+        .plus
+            background: $s2
+            &:before,
+            &:after
+                background: $n1
+
+.plus,
+.preview
+    position: relative
+    flex-shrink: 0
+    width: rem(96)
+    height: rem(96)
+    margin-right: rem(32)
+    border-radius: rem(16)
+    +m
+        margin-right: rem(24)
+
+.plus
+    background: $o3
+    transition: background .2s
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        background: $n7
+        border-radius: rem(2)
+        transition: background .2s
+    &:before
+        width: rem(2)
+        height: rem(16)
+    &:after
+        width: rem(16)
+        height: rem(2)
+
+.item
+    transition: box-shadow .2s
+    &:hover
+        +shadow1
+    &:not(:last-child)
+        margin-bottom: rem(24)
+
+.preview
+    img
+        border-radius: rem(16)
+
+.info
+    margin-bottom: rem(4)
+    +body1
+    color: $n7
+    +m
+        +body1M
+
+.price
+    +body2Bold
+    color: $n4
+    +m
+        +base
+
+.foot
+    margin-top: rem(44)
+    text-align: center
+    +w
+        margin-top: rem(24)
+
+.link
+    +body2Bold
+    color: $n5
+    transition: color .2s
+    +d
+        +base
+    &:hover
+        color: $n7

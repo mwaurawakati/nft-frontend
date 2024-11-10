@@ -1,0 +1,112 @@
+@import @/styles/helpers
+
+.filters
+    margin: rem(80) 0 rem(56)
+    +w
+        margin-top: rem(64)
+    +t
+        margin: rem(32) 0
+    .form
+        width: rem(700)
+        +d
+            width: rem(440)
+        +t
+            width: 100%
+    .formInput
+        height: rem(80)
+        +m
+            height: rem(72)
+            +body1S
+    &.dark
+        .title
+            color: $n1
+        .label
+            color: $n3
+        .input
+            border-color: $n6
+            color: $n1
+            &:focus-visible
+                border-color: $n1
+
+.head
+    display: flex
+    align-items: center
+    margin-bottom: rem(80)
+    +w
+        margin-bottom: rem(64)
+    +t
+        display: block
+        margin-bottom: rem(32)
+
+.title
+    margin-right: auto
+    transition: color .2s
+    +t
+        margin: 0 0 rem(16)
+
+.row
+    display: flex
+    margin: 0 rem(-20)
+    +d
+        display: block
+        margin: 0
+
+.col
+    flex: 0 0 calc(50% - rem(40))
+    width: calc(50% - rem(40))
+    margin: 0 rem(20)
+    +d
+        width: 100%
+        margin: 0
+    &:not(:last-child)
+        +d
+            margin-bottom: rem(24)
+
+.label
+    margin-bottom: rem(32)
+    +body1
+    transition: color .2s
+    +d
+        margin-bottom: rem(16)
+        +body1M
+
+.statuses
+    display: flex
+    flex-wrap: wrap
+    margin: rem(-16) 0 0 rem(-16)
+
+.status
+    min-width: calc(25% - rem(16))
+    margin: rem(16) 0 0 rem(16)
+    +w
+        min-width: calc(33% - rem(16))
+    +d
+        min-width: calc(25% - rem(16))
+    +m
+        min-width: calc(50% - rem(16))
+
+.fieldset
+    display: flex
+    margin: 0 rem(-8)
+
+.field,
+.button
+    flex: 0 0 calc(33.333% - rem(16))
+    width: calc(33.333% - rem(16))
+    margin: 0 rem(8)
+
+.input
+    width: 100%
+    height: rem(60)
+    padding: 0 rem(16)
+    border: rem(2) solid $n3
+    border-radius: rem(4)
+    text-align: center
+    background: transparent
+    +title
+    color: $n7
+    transition: border-color .2s
+    &::placeholder
+        color: $n4
+    &:focus-visible
+        border-color: $s2

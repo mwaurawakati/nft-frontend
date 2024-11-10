@@ -1,0 +1,129 @@
+@import @/styles/helpers
+
+.slide
+    position: relative
+    display: flex
+    align-items: flex-end
+    min-height: calc(100vh - rem(96))
+    background: $n1
+    box-sizing: border-box
+    +t
+        min-height: rem(600)
+    +m
+        min-height: calc(100vh - rem(88))
+    &:after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 23.41%, rgba(0, 0, 0, 0.54) 100%)
+
+.row
+    position: relative
+    z-index: 2
+    display: flex
+    width: 100%
+    padding: rem(80)
+    +xl
+        padding: rem(64)
+    +w
+        padding: rem(40)
+    +t
+        padding: rem(40) rem(24)
+    +m
+        padding: rem(24)
+
+.details
+    width: 100%
+    max-width: rem(664)
+    margin-right: auto
+    +d
+        flex-grow: 1
+        max-width: rem(600)
+        padding-right: rem(40)
+    +t
+        max-width: 100%
+        padding-right: 0
+
+.head
+    display: flex
+    align-items: flex-end
+    margin-bottom: rem(40)
+    +d
+        align-items: flex-start
+    +m
+        display: block
+
+.title
+    margin-right: auto
+    color: $n1
+    +d
+        padding-top: rem(8)
+        +h1S
+    +m
+        padding-top: 0
+
+.author
+    display: inline-flex
+    align-items: center
+    flex-shrink: 0
+    margin: 0 0 rem(8) rem(24)
+    padding: rem(12)
+    background: $n8
+    border-radius: rem(12)
+    +title
+    color: $n1
+    +d
+        margin-bottom: 0
+    +m
+        margin: rem(12) 0 0
+
+.avatar
+    position: relative
+    width: rem(40)
+    height: rem(40)
+    margin-right: rem(16)
+    img
+        border-radius: rem(8)
+
+.btns
+    display: flex
+    margin: 0 rem(-12)
+
+.button
+    flex: 1 1 auto
+    margin: 0 rem(12)
+    +m
+        padding: 0 rem(8)
+
+.box
+    flex-shrink: 0
+    width: rem(420)
+    padding: rem(28) rem(40)
+    border-radius: rem(24)
+    box-shadow: 0 rem(16) rem(40) rem(-8) rgba(0, 0, 0, 0.12)
+    background: $n1
+    +w
+        width: rem(360)
+        padding: rem(20) rem(24)
+    +d
+        width: rem(320)
+    +t
+        display: none
+
+.info
+    margin-bottom: rem(12)
+    +base
+    color: $n5
+
+.timer
+    .timerItem
+        flex: 1 1 auto
+    .timerValue
+        +w
+            font-size: rem(48)
+            line-height: rem(48)
+    .timerText
+        color: $n5

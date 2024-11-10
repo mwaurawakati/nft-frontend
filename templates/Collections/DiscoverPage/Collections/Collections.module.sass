@@ -1,0 +1,51 @@
+@import @/styles/helpers
+
+.collections
+    padding: rem(128) rem(80)
+    overflow: hidden
+    +xl
+        padding: rem(64)
+    +w
+        padding: rem(64) rem(40)
+    +t
+        padding: rem(48) rem(24)
+
+.head
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: rem(60)
+    +t
+        display: block
+    .tabs
+        flex-shrink: 0
+        margin-left: rem(40)
+        +t
+            margin: rem(24) 0 0
+
+.title
+    max-width: rem(600)
+    +t
+        max-width: 100%
+
+.list
+    display: flex
+    flex-wrap: wrap
+    margin: rem(-40) rem(-20) 0
+    +d
+        margin: rem(-40) rem(-12) 0
+    +m
+        display: block
+        margin: 0
+
+.collection
+    flex: 0 0 calc(50% - rem(40))
+    width: calc(50% - rem(40))
+    margin: rem(40) rem(20) 0
+    +d
+        flex: 0 0 calc(50% - rem(24))
+        width: calc(50% - rem(24))
+        margin: rem(40) rem(12) 0
+    +m
+        width: 100%
+        margin: rem(48) 0 0

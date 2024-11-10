@@ -1,0 +1,149 @@
+@import @/styles/helpers
+
+.row
+    display: flex
+    +t
+        display: block
+
+.col
+    flex: 0 0 50%
+    width: 50%
+    +t
+        width: 100%
+    &:nth-child(1)
+        background: $a2
+
+.wrap
+    position: sticky
+    top: 0
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    max-height: 100vh
+    height: 100%
+    padding: rem(80)
+    +xl
+        padding: rem(64)
+    +w
+        padding: rem(64) rem(40)
+    +d
+        padding: rem(40)
+    +t
+        padding: rem(40) rem(24)
+
+.title
+    max-width: rem(440)
+    margin-bottom: rem(40)
+
+.list
+    +t
+        height: rem(549)
+        overflow: auto
+    +m
+        height: rem(374)
+
+.item
+    position: relative
+    display: block
+    overflow: hidden
+    background: $n8
+    color: $n1
+    +t
+        height: rem(550)
+    +m
+        height: rem(375)
+    &:before
+        content: ""
+        display: block
+        padding-bottom: 100%
+        +xl
+            padding-bottom: 111%
+        +d
+            padding-bottom: 125%
+        +t
+            display: none
+    &:after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 58.37%, rgba(0, 0, 0, 0.85) 100%)
+    &:hover
+        .image
+            transform: scale(1.05)
+
+.image
+    transition: transform 1s
+
+.details
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    width: 100%
+    height: 100%
+    padding: rem(80)
+    +xl
+        padding: rem(80) rem(64)
+    +w
+         padding: rem(64) rem(40) rem(40)
+    +d
+        padding: rem(40)
+    +t
+        padding: rem(40) rem(24)
+    +m
+        padding: rem(24)
+
+.author
+    display: inline-flex
+    align-items: center
+    margin-bottom: auto
+    padding: rem(12)
+    background: $o7-75
+    border-radius: rem(12)
+    +title
+
+.avatar
+    position: relative
+    flex-shrink: 0
+    width: rem(40)
+    height: rem(40)
+    margin-right: rem(16)
+    img
+        border-radius: rem(8)
+
+.line
+    display: flex
+    justify-content: space-between
+    width: 100%
+
+.category
+    margin-bottom: rem(12)
+    +title
+    +w
+        +base
+    +m
+        +baseS
+
+.crypto
+    margin-bottom: rem(8)
+    +w
+        font-size: rem(32)
+        line-height: rem(40)
+    +m
+        +h4S
+
+.price
+    +title
+    color: $n2
+    +w
+        +base
+    +m
+        +baseS
+

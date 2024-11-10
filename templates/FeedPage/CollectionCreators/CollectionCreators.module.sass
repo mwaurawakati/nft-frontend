@@ -1,0 +1,58 @@
+@import @/styles/helpers
+
+.row
+    display: flex
+    border-top: rem(1) solid $n3
+    +t
+        display: block
+
+.col
+    padding: rem(80)
+    +xl
+        padding: rem(64)
+    +w
+        padding: rem(64) rem(40)
+    +t
+        padding: rem(40) rem(24)
+    &:nth-child(1)
+        flex-grow: 1
+    &:nth-child(2)
+        flex-shrink: 0
+        width: rem(566)
+        border-left: rem(1) solid $n3
+        +w
+            width: rem(420)
+        +t
+            width: 100%
+            border: none
+
+.title
+    margin-bottom: rem(80)
+    +t
+        margin-bottom: rem(40)
+        br
+            display: none
+
+.collection
+    &:not(:last-child)
+        margin-bottom: rem(128)
+        +xl
+            margin-bottom: rem(104)
+        +d
+            margin-bottom: rem(80)
+        +t
+            margin-bottom: rem(64)
+
+.btns
+    margin-top: rem(72)
+    text-align: center
+    +d
+        margin-top: rem(56)
+    +t
+        margin-top: rem(48)
+
+.users
+    &:not(:nth-child(1))
+        padding-top: rem(80)
+        +d
+            padding-top: rem(64)

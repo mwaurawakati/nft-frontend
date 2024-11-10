@@ -1,0 +1,67 @@
+@import @/styles/helpers
+
+.blog
+    padding: rem(128) 0
+    overflow: hidden
+    +w
+        padding: rem(64) 0
+
+.wrapper
+    position: relative
+    max-width: rem(960)
+    margin: 0 auto
+    +t
+        max-width: 100%
+        padding: 0 rem(24)
+
+.title
+    margin-bottom: rem(96)
+    padding-right: rem(156)
+    +w
+        margin-bottom: rem(64)
+    +m
+        margin-bottom: rem(24)
+        padding-right: 0
+
+.inner
+    margin: 0 rem(-30)
+    +d
+        margin: 0 rem(-20)
+    +m
+        position: relative
+        padding-top: rem(96)
+
+.item
+    display: block
+    margin: 0 rem(30)
+    color: $n7
+    transition: color .2s
+    +d
+        margin: 0 rem(20)
+    &:hover
+        color: $s2
+        .preview
+            img
+                transform: scale(1.05)
+
+.preview
+    position: relative
+    margin-bottom: rem(48)
+    border-radius: rem(24)
+    overflow: hidden
+    &:before
+        content: ""
+        display: block
+        padding-bottom: 100%
+    img
+        border-radius: rem(24)
+        transition: all 1s
+
+.subtitle
+    margin-bottom: rem(24)
+
+.content
+    +body2
+    color: $n5
+
+    

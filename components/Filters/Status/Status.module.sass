@@ -1,0 +1,57 @@
+@import @/styles/helpers
+
+.status
+    display: flex
+    justify-content: center
+    align-items: center
+    height: rem(60)
+    padding: 0 rem(16)
+    border: rem(2) solid $n3
+    border-radius: rem(4)
+    +base
+    color: $n7
+    transition: all .2s
+    &:hover
+        border-color: $n7
+        .check
+            border-color: $n7
+    &.active
+        border-color: $s2
+        .check
+            background: $n7
+            border-color: $n7
+            svg
+                fill: $n1
+    &.dark
+        border-color: $n6
+        color: $n3
+        .check
+            border-color: $n5
+        &:hover
+            border-color: $n4
+            .check
+                border-color: $n4
+        &.active
+            border-color: $n1
+            .check
+                background: $n1
+                border-color: $n7
+                svg
+                    fill: $n7
+        
+
+.check
+    display: flex
+    justify-content: center
+    align-items: center
+    width: rem(24)
+    height: rem(24)
+    margin-right: rem(8)
+    border: rem(2) solid $n3
+    border-radius: 50%
+    transition: background .2s, border-color .2s
+    svg
+        width: rem(16)
+        height: rem(16)
+        fill: transparent
+        transition: fill .2s

@@ -1,0 +1,14 @@
+@import @/styles/helpers
+
+.row
+    display: flex
+    min-height: calc(100vh - rem(96))
+    +t
+        display: block
+        min-height: auto
+
+.col
+    flex: 0 0 50%
+    width: 50%
+    +t
+        width: 100%

@@ -1,0 +1,257 @@
+@import @/styles/helpers
+
+.header
+    position: relative
+    display: flex
+    padding: 0 rem(40)
+    z-index: 10
+    +d
+        padding: 0 rem(24)
+    +t
+        height: rem(96)
+        &:before
+            content: ""
+            position: absolute
+            left: rem(24)
+            right: rem(24)
+            bottom: 0
+            height: rem(1)
+            background: $n3
+            transition: background .2s
+    +m
+        height: rem(88)
+    .logo
+        margin-right: auto
+        +m
+            width: rem(40)
+            overflow: hidden
+    &.light
+        &:before
+            background: $o3
+        .col
+            border-color: $o3
+        .button
+            border-color: $n3
+            color: $n1
+            svg
+                fill: $n1
+            &:hover
+                background: $n1
+                border-color: $n1
+                color: $n7
+                svg
+                    fill: $n7
+        .create
+            +m
+                border-color: $o3
+        .notification
+            background: $n1
+            &:hover
+                background: $n1
+                svg
+                    fill: $s2
+        .link
+            color: $n3
+            &:hover
+                color: $n1
+        .burger
+            &:before,
+            &:after
+                background: $n3
+    &.profileOpen
+        .col
+            border-color: $o6
+        &:before
+            background: $o6
+            +m
+                background: transparent
+    &.noRegistration
+        .logo
+            +m
+                width: rem(168)
+        .discover
+            display: none
+        .profile,
+        .notification,
+        // .create
+        //     display: none // Commented out to make visible all through the project
+        .navigation
+            +xl
+                display: flex
+            +t
+                display: none
+        .link
+            margin-left: rem(60)
+            +w
+                margin-left: rem(48)
+            &:nth-child(1)
+                display: block
+        .connect
+            display: none
+            // display: inline-flex
+            // +t
+            //     display: none // Commented out to make invisible all through the project
+        .burger
+            margin-left: rem(52)
+            +w
+                margin-left: rem(36)
+    &.empty
+        display: flex
+        align-items: center
+        height: rem(96)
+        box-shadow: 0 rem(12) rem(40) rem(-16) rgba(0, 0, 0, 0.05)
+        +t
+            &:before
+                display: none
+        +m
+            height: rem(88)
+        .profileHead
+            +m
+                width: rem(48)
+                height: rem(48)
+        .profileBody
+            right: 0
+
+.col
+    display: flex
+    align-items: center
+    flex: 0 0 50%
+    height: rem(96)
+    border-bottom: rem(1) solid $n3
+    transition: border-color .2s
+    +t
+        flex: auto
+        height: auto
+        border: none
+    &:nth-child(1)
+        padding-right: rem(32)
+        +t
+            margin-right: auto
+            padding-right: 0
+    &:nth-child(2)
+        justify-content: flex-end
+        padding-left: rem(32)
+        border-left: rem(1) solid $n3
+        +t
+            padding-left: 0
+            border: none
+
+.navigation
+    display: flex
+    +xl
+        display: none
+
+.link
+    margin-left: rem(48)
+    +button
+    color: $n7
+    transition: color .2s
+    &:hover
+        color: $s2
+    &:nth-child(1)
+        display: none
+    &:nth-child(n+1)
+        +d
+            display: none
+
+.create,
+.notification,
+.profile
+    margin-left: rem(48)
+    +t
+        margin-left: rem(32)
+    +m
+        margin-left: rem(24)
+
+.create
+    +d
+        margin-left: 0
+    +m
+        width: rem(32)
+        height: rem(32)
+        padding: 0
+        border-radius: 50%
+        font-size: 0
+        svg
+            margin: 0
+
+.connect
+    display: none
+    margin-left: rem(60)
+    +w
+        margin-left: rem(48)
+
+.notification
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: rem(48)
+    height: rem(48)
+    border-radius: 50%
+    background: $n3
+    transition: background .2s
+    +m
+        width: rem(40)
+        height: rem(40)
+    svg
+        transition: fill .2s
+    &:hover
+        background: $n7
+        svg
+            fill: $n1
+    &.active
+        position: relative
+        &:before
+            content: ""
+            position: absolute
+            top: 0
+            right: 0
+            width: rem(14)
+            height: rem(14)
+            border-radius: 50%
+            background: $red
+            +m
+                top: rem(1)
+                right: rem(1)
+                width: rem(10)
+                height: rem(10)
+
+.burger
+    margin: 0 rem(-8) 0 rem(40)
+    +t
+        margin-left: rem(32)
+    +m
+        margin-left: rem(24)
+
+button.close
+    border-color: $n7
+    +t
+        svg
+            fill: $n7
+
+.overlay
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 8
+    width: 100%
+    height: 100%
+    background: rgba(#202020, .95)
+    backdrop-filter: blur(rem(32))
+    visibility: hidden
+    opacity: 0
+    transition: all .2s
+    +m
+        z-index: 8
+    &.visible
+        visibility: visible
+        opacity: 1
+
+.search
+    +t
+        display: none
+
+div.modal
+    display: block
+        

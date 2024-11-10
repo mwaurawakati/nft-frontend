@@ -1,0 +1,68 @@
+@import @/styles/helpers
+
+.detail
+    padding: rem(128) rem(80)
+    +xl
+        padding: rem(104) rem(64)
+    +w
+        padding: rem(80) rem(40)
+    +t
+        padding: rem(64) rem(24)
+
+.item
+    display: flex
+    align-items: flex-start
+    +t
+        display: block
+        max-width: rem(600)
+        margin: 0 auto
+    &:nth-child(3n+1)
+        .preview
+            background: linear-gradient(136.42deg, #FFE70F 1.16%, #FFC179 22.02%, #FF774C 59.98%, #EF2DD0 102.39%)
+    &:nth-child(3n+2)
+        .preview
+            background: linear-gradient(137.84deg, #8DE4FF 1.33%, #3062C2 46.68%, #8230C2 106.2%)
+    &:nth-child(3n+3)
+        .preview
+            background: linear-gradient(137.84deg, #BF8DFF 1.33%, #72EEFF 46.68%, #30C250 106.2%)
+    &:not(:last-child)
+        margin-bottom: rem(128)
+        +xl
+            margin-bottom: rem(80)
+        +t
+            margin-bottom: rem(64)
+
+.preview
+    flex-shrink: 0
+    width: rem(600)
+    padding: rem(60) rem(60) 0
+    border-radius: rem(24)
+    text-align: center
+    font-size: 0
+    +w
+        width: rem(480)
+        padding: rem(48) rem(48) 0
+    +t
+        width: 100%
+        margin-bottom: rem(32)
+        padding: rem(60) rem(60) 0
+    +s
+        padding: rem(32) rem(32) 0
+        border-radius: rem(14)
+    img
+        border-radius: rem(20) rem(20) 0 0
+        +s
+            border-radius: rem(11) rem(11) 0 0
+
+.content
+    padding-left: rem(160)
+    +xl
+        padding-left: rem(64)
+    +w
+        padding-left: rem(48)
+    +t
+        padding-left: 0
+    h3
+        +w
+            font-size: rem(32)
+            line-height: rem(40)

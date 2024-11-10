@@ -1,0 +1,67 @@
+@import @/styles/helpers
+
+.upload
+    display: flex
+    align-items: center
+    margin-top: rem(24)
+    +m
+        display: block
+
+.preview
+    position: relative
+    flex-shrink: 0
+    width: rem(200)
+    height: rem(200)
+    margin-right: rem(40)
+    border-radius: rem(32)
+    background: #BDC4C4
+    +w
+        width: rem(170)
+        height: rem(170)
+        margin-right: rem(24)
+    +m
+        margin: 0 0 rem(24)
+    img
+        border-radius: rem(32)
+
+.close
+    position: absolute
+    top: rem(16)
+    left: rem(16)
+    z-index: 1
+    width: rem(40)
+    height: rem(40)
+    border-radius: 50%
+    background: $n1
+    font-size: 0
+    transition: background .2s
+    svg
+        transition: fill .2s
+    &:hover
+        background: $n7
+        svg
+            fill: $n1
+
+.title
+    margin-bottom: rem(12)
+    +d
+        +h4S
+
+.content
+    max-width: rem(255)
+    margin-bottom: rem(32)
+    +baseMedium
+    color: $n5
+    +w
+        margin-bottom: rem(24)
+    +d
+        margin-bottom: rem(12)
+
+.file
+    position: relative
+    display: inline-block
+
+.input
+    position: absolute
+    inset: 0
+    opacity: 0

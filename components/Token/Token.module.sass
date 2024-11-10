@@ -1,0 +1,69 @@
+@import @/styles/helpers
+
+.token
+    display: block
+    color: $n1
+    transition: color .2s
+    &:hover
+        color: $s2
+        .preview
+            img
+                transform: scale(1.05)
+    &.large
+        .title
+            font-size: rem(32)
+            line-height: rem(40)
+            font-weight: 800
+    &.dark
+        color: $n7
+        .price
+            color: $n7
+        &:hover
+            color: $s2
+
+.preview
+    position: relative
+    margin-bottom: rem(20)
+    border-radius: rem(20)
+    overflow: hidden
+    &:before
+        content: ""
+        display: block
+        padding-bottom: 100%
+    img
+        border-radius: rem(20)
+        transition: transform 1s
+
+
+.Spreview
+    position: relative
+    margin-bottom: rem(20)
+    border-radius: rem(20)
+    overflow: hidden
+    &:before
+        content: ""
+        display: block
+    img
+        border-radius: rem(20)
+        transition: transform 1s
+
+.title
+    margin-bottom: rem(4)
+    +body1
+    +d
+        +body1M
+    +m
+        +body1
+
+.category
+    +captionBold
+    color: $n5
+
+.line
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.price
+    +base
+    color: $a4

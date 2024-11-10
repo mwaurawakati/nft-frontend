@@ -1,0 +1,80 @@
+@import @/styles/helpers
+
+.stage
+    margin-bottom: rem(92)
+    +d
+        margin-bottom: rem(64)
+    +t
+        margin-bottom: rem(32)
+
+.file
+    position: relative
+    margin-bottom: rem(32)
+    border-radius: rem(20)
+    background: $o3
+    overflow: hidden
+    &:before
+        content: ""
+        display: block
+        padding-bottom: 100%
+    img
+        border-radius: rem(20)
+
+.title
+    display: flex
+    align-items: center
+    min-height: rem(48)
+    margin-bottom: rem(20)
+    &:empty
+        &:before
+            content: ""
+            display: block
+            width: rem(296)
+            height: rem(24)
+            border-radius: rem(4)
+            background: $n3
+
+.item
+    display: flex
+    align-items: center
+
+.preview
+    position: relative
+    flex-shrink: 0
+    width: rem(64)
+    height: rem(64)
+    margin-right: rem(16)
+    img
+        border-radius: rem(12)
+
+.wrap
+    margin-right: rem(32)
+
+.subtitle
+    +base
+
+.price
+    +captionBold
+    color: $n4
+
+.lines
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    margin-left: auto
+    &:before,
+    &:after
+        content: ""
+        display: block
+        height: rem(12)
+        border-radius: rem(4)
+        background: $n3
+    &:before
+        width: rem(88)
+        margin-bottom: rem(12)
+        +m
+            width: rem(60)
+    &:after
+        width: rem(128)
+        +m
+            width: rem(90)

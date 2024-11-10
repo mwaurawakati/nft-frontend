@@ -1,0 +1,50 @@
+@import @/styles/helpers
+
+.row
+    display: flex
+    align-items: flex-end
+    padding: rem(48) rem(80)
+    +xl
+        padding: rem(48) rem(64)
+    +w
+        padding: rem(40)
+    +t
+        padding: rem(40) rem(24)
+    +m
+        display: block
+        padding: rem(24)
+
+.wrap
+    display: flex
+    align-items: flex-start
+    margin-right: auto
+    +m
+        display: block
+        margin: 0 0 rem(32)
+
+.arrow
+    margin: rem(18) 0 0 rem(70)
+    +w
+        margin-left: rem(40)
+    +t
+        margin: rem(12) 0 0 rem(24)
+    +m
+        margin: rem(16) 0 0
+
+.box
+    text-align: right
+    +m
+        text-align: left
+
+.info
+    margin-bottom: rem(8)
+    color: $n5
+    +w
+        +h4S
+    +m
+        margin-bottom: rem(4)
+        +body1S
+
+.wrapper
+    box-sizing: border-box
+    

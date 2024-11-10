@@ -1,0 +1,38 @@
+@import @/styles/helpers
+
+.item
+    display: flex
+    align-items: center
+    padding: rem(24)
+    border-bottom: rem(1) solid $n3
+    color: $n7
+    transition: color .2s
+    +t
+        border-color: $o6
+        color: $n1
+    &:hover
+        color: $s2
+
+.preview
+    position: relative
+    flex-shrink: 0
+    width: rem(64)
+    height: rem(64)
+    margin-right: rem(16)
+    img
+        border-radius: rem(12)
+
+.title
+    +body2Bold
+
+.content
+    +base
+    color: $n7
+    +t
+        color: $n5
+    span
+        color: $n5
+        +t
+            color: $n5
+
+        

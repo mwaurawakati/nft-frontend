@@ -1,0 +1,155 @@
+[class^="button"]
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    height: rem(64)
+    padding: 0 rem(36)
+    background: $n7
+    border: rem(2) solid $n7
+    border-radius: rem(4)
+    text-align: center
+    +button
+    color: $n1
+    transition: all .2s
+    +m
+        height: rem(60)
+    svg
+        margin-left: rem(12)
+        fill: $n1
+        transition: fill .2s
+    &:hover
+        background: $n8
+        border-color: $n8
+
+.button-stroke
+    background: transparent
+    color: $n8
+    svg
+        fill: $n8
+    &:hover
+        background: $n7
+        border-color: $n7
+        color: $n1
+        svg
+            fill: $n1
+
+.button-white
+    background: $n1
+    border-color: $n1
+    color: $n7
+    svg
+        fill: $n7
+    &:hover
+        background: $n1
+        border-color: $n1
+        color: $s2
+        svg
+            fill: $s2
+
+.button-stroke-white
+    background: transparent
+    border-color: $n1
+    color: $n1
+    svg
+        fill: $n1
+    &:hover
+        background: $n1
+        border-color: $n1
+        color: $n8
+        svg
+            fill: $n8
+
+.button-stroke-grey
+    background: transparent
+    border-color: $n3
+    color: $n7
+    svg
+        fill: $n7
+    &:hover
+        background: transparent
+        border-color: $n7
+        color: $n7
+        svg
+            fill: $n7
+
+.button-empty
+    position: relative
+    height: auto
+    padding: 0 rem(44) 0 0
+    background: transparent
+    border: none
+    text-align: left
+    color: $n7
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        border-radius: 50%
+    &:before
+        right: 0
+        width: rem(24)
+        height: rem(24)
+        border: rem(2) solid $n4
+        transition: border-color .2s
+    &:after
+        right: rem(10)
+        width: rem(4)
+        height: rem(4)
+        background: $n4
+        transition: transform .2s, background .2s
+    &:hover
+        background: transparent
+        color: $s2
+        &:before
+            border-color: $s2
+        &:after
+            transform: translateY(-50%) scale(2)
+            background: $s2
+
+.button-large
+    height: rem(60)
+    
+.button-medium
+    height: rem(48)
+    padding: 0 rem(30)
+    svg
+        margin-left: rem(8)
+
+.button-small
+    height: rem(40)
+    padding: 0 rem(17)
+    svg
+        margin-left: rem(8)
+
+.button-wide
+    width: 100%
+
+.button-counter
+    span
+        margin-left: rem(12)
+        padding: rem(2) rem(8)
+        background: $n3
+        border-radius: rem(12)
+
+.button-circle
+    flex-shrink: 0
+    width: rem(60)
+    height: rem(60)
+    padding: 0
+    border-color: $n3
+    background: transparent
+    border-radius: 50%
+    svg
+        margin: 0
+        fill: $n7
+        transition: fill .2s
+    &:hover
+        background: $n7
+        border-color: $n7
+        svg
+            fill: $n1
+    &.button-medium
+        width: rem(48)
+        height: rem(48)

@@ -1,0 +1,104 @@
+.content
+    h1,
+    h2,
+    h3,
+    h4
+        font-weight: 800
+    h1,
+    h2,
+    h3,
+    h4,
+    h5
+        margin-bottom: rem(48)
+        letter-spacing: -0.02em
+        +w
+            margin-bottom: rem(32)
+    h1
+        font-size: rem(80)
+        line-height: 1
+        +w
+            +h1M
+        +m
+            +h1S
+    h2
+        font-size: rem(64)
+        line-height: 1
+        +w
+            +h3M
+    h3
+        font-size: rem(48)
+        line-height: 1
+        +m
+            +h3M
+    h4
+        font-size: rem(32)
+        line-height: rem(40)
+    h5
+        +body1
+        color: $n5
+    p
+        +body2
+        color: $n5
+        +w
+            +body2M
+        &:not(:last-child)
+            margin-bottom: rem(24)
+            +w
+                margin-bottom: rem(16)
+    ul
+        li
+            position: relative
+            padding-left: rem(40)
+            +body2Bold
+            color: $n5
+            +w
+                font-size: rem(16)
+                line-height: rem(24)
+            &:before,
+            &:after
+                content: ""
+                position: absolute
+                border-radius: 50%
+            &:before
+                top: rem(4)
+                left: 0
+                width: rem(24)
+                height: rem(24)
+                border: rem(2) solid $s2
+                +w
+                    top: 0
+            &:after
+                top: rem(14)
+                left: rem(10)
+                width: rem(4)
+                height: rem(4)
+                background: $s2
+                +w
+                    top: rem(10)
+            &:not(:last-child)
+                margin-bottom: rem(24)
+        &:not(:nth-child(1))
+            margin-top: rem(40)
+            +w
+                margin-top: rem(24)
+        &:not(:last-child)
+            margin-bottom: rem(40)
+            +w
+                mask-border: rem(24)
+    figure
+        +m
+            margin: 0 rem(-24)
+        img
+            border-radius: rem(24)
+            +m
+                min-height: rem(300)
+                border-radius: 0
+                object-fit: cover
+        &:not(:nth-child(1))
+            margin-top: rem(48)
+            +m
+                margin-top: rem(32)
+        &:not(:last-child)
+            margin-bottom: rem(48)
+            +m
+                margin-bottom: rem(32)

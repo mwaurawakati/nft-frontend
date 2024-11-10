@@ -1,0 +1,121 @@
+@import @/styles/helpers
+
+.row
+    display: flex
+    +t
+        display: block
+
+.col
+    flex: 0 0 50%
+    +t
+        width: 100%
+    &:nth-child(2)
+        padding: rem(80)
+        +xl
+            padding: rem(64)
+        +w
+            padding: rem(64) rem(40)
+        +d
+            padding: rem(40)
+        +t
+            padding: rem(40) rem(24)
+
+.wrap
+    position: sticky
+    top: 0
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    padding: rem(80)
+    background: $n2
+    +xl
+        padding: rem(64)
+    +w
+        padding: rem(64) rem(40)
+    +d
+        padding: rem(40)
+    +t
+        min-height: auto
+        padding: rem(40) rem(24)
+
+.head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: rem(64)
+    +xl
+        margin-bottom: rem(48)
+    +w
+        margin-bottom: rem(32)
+    +m
+        display: block
+
+.title
+    +d
+        +h1S
+    +m
+        margin-bottom: rem(16)
+
+.menu
+    margin: 0 rem(-40) auto
+    +xl
+        margin: 0 rem(-32) auto
+    +w
+        margin: 0 rem(-20) auto
+    +t
+        margin: 0 rem(-12) rem(24)
+
+.button
+    +m
+        width: 100%
+
+.link
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    height: rem(100)
+    padding: 0 rem(40)
+    border-radius: rem(20)
+    color: $n5
+    cursor: pointer
+    transition: box-shadow .2s, background .2s, color .2s
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    +xl
+        padding: 0 rem(32)
+    +w
+        height: rem(72)
+        padding: 0 rem(20)
+        border-radius: rem(12)
+        +body1M
+    svg
+        fill: $n5
+        transition: fill .2s
+    &:hover,
+    &.active
+        color: $n7
+        svg
+            fill: $n7
+    &.active
+        +shadow2
+        background: $n1
+
+.section
+    position: relative
+    &:not(:last-child)
+        margin-bottom: rem(80)
+        +w
+            margin-bottom: rem(64)
+
+.anchor
+    position: absolute
+    top: rem(-40)
+    left: 0
+    right: 0
+    +t
+        top: rem(-24)
+
+.label
+    margin-bottom: rem(24)
+    +button
+    color: $n4

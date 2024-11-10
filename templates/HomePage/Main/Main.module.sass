@@ -1,0 +1,68 @@
+@import @/styles/helpers
+
+.row
+    display: flex
+    padding: rem(48) rem(40)
+    +xl
+        padding: rem(24) 0
+    +w
+        padding: rem(32) rem(8)
+    +d
+        padding: rem(16) rem(8)
+    +t
+        display: block
+        padding: rem(48) rem(24)
+
+.col
+    flex: 0 0 calc(50% - rem(80))
+    width: calc(50% - rem(80))
+    margin: 0 rem(40)
+    +xl
+        flex: 0 0 50%
+        width: 50%
+        margin: 0
+        padding: 0 rem(64)
+    +w
+        padding: 0 rem(32)
+    +t
+        width: 100%
+        padding: 0
+    &:nth-child(1)
+        display: flex
+        justify-content: space-between
+        +m
+            display: block
+    &:nth-child(2)
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        padding: rem(24) 0 rem(8)
+        +xl
+            padding: rem(8) rem(64)
+        +w
+            padding: rem(8) rem(32)
+        +t
+            margin-top: rem(32)
+            padding: 0
+
+.arrow
+    margin: rem(18) 0 0 rem(18)
+    +w
+        margin-top: rem(12)
+    +m
+        margin: rem(20) 0 0
+
+.content
+    +body2
+    color: #686A6C
+    +w
+        +body2M
+
+.search
+    +t
+        margin-top: rem(24)
+
+.wrapper
+    position: relative
+    z-index: 2

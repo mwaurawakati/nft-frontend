@@ -1,0 +1,61 @@
+@import @/styles/helpers
+
+.actions
+    display: flex
+    &.dark
+        .sorting,
+        .filters
+            svg
+                fill: $n5
+            &:hover
+                svg
+                    fill: $n7
+            &.active
+                svg
+                    fill: $n1
+
+.sorting,
+.theme,
+.filters
+    flex-shrink: 0
+    width: rem(48)
+    height: rem(48)
+    font-size: 0
+    svg
+        transition: fill .2s
+    &:not(:last-child)
+        margin-right: rem(12)
+
+.sorting
+    border-radius: 50%
+    transition: background .2s
+    +m
+        display: none
+    svg
+        fill: $n6
+        transition: fill .2s
+    &:hover,
+    &.active
+        svg
+            fill: $n1
+    &.active
+        background: $n7
+
+.theme,
+.filters
+    svg
+        fill: $n5
+    &:hover
+        svg
+            fill: $n1
+    &.active
+        .sun
+            display: none
+        .moon
+            display: inline-block
+        &:hover
+            svg
+                fill: $n8
+
+.moon
+    display: none

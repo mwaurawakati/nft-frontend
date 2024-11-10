@@ -1,0 +1,49 @@
+@import @/styles/helpers
+
+.button
+    min-width: rem(160)
+    padding: 0 rem(16)
+    background: transparent
+    border-color: $n6
+    &:hover
+        border-color: $n3
+        background: transparent
+        color: $n1
+        svg
+            fill: $n1
+    &.active
+        background: $n1
+        border-color: $n1
+        color: $n8
+        svg
+            fill: $n8
+        .check
+            display: inline-block
+        .plus
+            display: none
+        .text
+            span
+                display: inline
+    &.dark
+        border-color: $n3
+        color: $n7
+        svg
+            fill: $n7
+        &:hover
+            border-color: $n7
+            color: $n7
+            svg
+                fill: $n7
+        &.active
+            background: $n7
+            border-color: $n7
+            color: $n1
+            svg
+                fill: $n1
+
+.check
+    display: none
+
+.text
+    span
+        display: none
